@@ -1,2 +1,9 @@
 node_modules/
 dist/
+lumiere-demo-1/
+
+lumiere-demo-1/app/src/js/main.js
+
+lumiere-demo-1/app/dist/js/bundle.js
+
+lumiere-demo-1/app/dist/css/style.css
