@@ -1,6 +1,6 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('autoprefixer'),
     uglify = require('gulp-uglify'),
     webpack = require('webpack-stream'),
     sync = require('browser-sync').create(),
