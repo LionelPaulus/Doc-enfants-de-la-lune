@@ -64,7 +64,7 @@
 	    var canvas = document.getElementById('canvas');
 	    var context = canvas.getContext('2d');
 
-	    var tracker = new tracking.ColorTracker();
+	    var tracker = new tracking.ColorTracker('magenta');
 	    console.log(tracker);
 	    tracking.track('#video', tracker, { camera: true });
 	    var prevPos = {
