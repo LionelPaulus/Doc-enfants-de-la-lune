@@ -40,8 +40,12 @@ window.onload = function() {
 
         //ZOOM
         point.style.transform = `scale(${ratio / 10})`
-      //  demoFlashlight.style.transform = `scale(${ratio / 10})`
-
+        if (ratio < 0.5) {
+            demoFlashlight.style.transform = `scale(1)`
+        }
+        else{
+             demoFlashlight.style.transform = `scale(${ratio / 10})`
+        }
         //RENDER TRACK
         point.style.left = (canvas.width - rect.x) / canvas.width * 100 + "%";
         point.style.top = (rect.y / canvas.height * 100) + "%";
