@@ -1,3 +1,4 @@
 node_modules/
 dist/
 app/src/vendor/libs/
+**/npm-debug.log
