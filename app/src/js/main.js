@@ -40,12 +40,14 @@ window.onload = function() {
 
         //ZOOM
         point.style.transform = `scale(${ratio / 10})`
-        demoFlashlight.style.transform = `scale(${ratio / 10})`
+      //  demoFlashlight.style.transform = `scale(${ratio / 10})`
 
         //RENDER TRACK
         point.style.left = (canvas.width - rect.x) / canvas.width * 100 + "%";
         point.style.top = (rect.y / canvas.height * 100) + "%";
-
+        [].forEach.call(demoFlashlight.querySelectorAll('p'), function(elem){
+          elem.style.transform = `translate3d(${ (rect.x - 250) * -0.25}px , ${(rect.y - 250) * -0.25}px, 0px)`
+        })
         //FLASH LIGHT
         demoFlashlight.style.backgroundPosition = (canvas.width - rect.x) / canvas.width * 100 + "%" + (rect.y / canvas.height * 100) + "%";
 
@@ -71,6 +73,10 @@ var demoFlashlight = document.getElementsByClassName("demo-flashlight")[0];
 
 demoFlashlight.onmousemove = (function(e) {
     demoFlashlight.style.backgroundPosition = (e.pageX - 250) + 'px ' + (e.pageY - 250) + 'px';
+    [].forEach.call(demoFlashlight.querySelectorAll('p'), function(elem){
+      elem.style.transform = `translate3d(${ (e.pageX - 250) * -0.25}px , ${(e.pageY - 250) * -0.25}px, 0px)`
+    })
+  //  demoFlashlight.style.transform = `translate3d(${ (e.pageX - 250) * -0.25}px , ${(e.pageY - 250) * -0.25}px, 0px)`
 });
 demoFlashlight.onmousewheel = (function(e) {
     //  let test = new scrollDetect(e, demoFlashlight);
