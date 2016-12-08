@@ -1,15 +1,14 @@
-export class initGUIControllers {
+export class InitGUIControllers {
 
     constructor(tracker) {
-
-        //GUI Controllers
-        var gui = new dat.GUI();
-        var trackedColors = {
+        // GUI Controllers
+        const gui = new dat.GUI();
+        const trackedColors = {
             custom: false,
             cyan: false,
             magenta: true,
-            yellow: false
-        }
+            yellow: false,
+        };
 
         // Object.keys(tracking.ColorTracker.knownColors_).forEach(function(color) {
         //     trackedColors[color] = true;
@@ -17,7 +16,6 @@ export class initGUIControllers {
 
         tracker.customColor = '#43918b';
 
-        createCustomColor(tracker.customColor)
         function createCustomColor(value) {
             var components = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(value);
             var customColorR = parseInt(components[1], 16);
@@ -60,10 +58,14 @@ export class initGUIControllers {
             updateColors();
         }
 
-        function updateColors() {
-            var colors = [];
 
-            for (var color in trackedColors) {
+        createCustomColor(tracker.customColor);
+
+
+        function updateColors() {
+            const colors = [];
+
+            for (const color in trackedColors) {
                 if (trackedColors[color]) {
                     colors.push(color);
                 }
@@ -72,23 +74,22 @@ export class initGUIControllers {
             tracker.setColors(colors);
         }
 
-        var colorsFolder = gui.addFolder('Colors');
+        const colorsFolder = gui.addFolder('Colors');
 
-        Object.keys(trackedColors).forEach(function(color) {
+        Object.keys(trackedColors).forEach((color) => {
             if (color !== 'custom') {
                 colorsFolder.add(trackedColors, color).onFinishChange(updateColors);
             }
         });
-        colorsFolder.add(trackedColors, 'custom').onFinishChange(function(value) {
+        colorsFolder.add(trackedColors, 'custom').onFinishChange((value) => {
             if (value) {
                 this.customColorElement = colorsFolder.addColor(tracker, 'customColor').onChange(createCustomColor);
-            } else {
-              if(this.customColorElement)
+            } else if ((this.customColorElement)) {
                 colorsFolder.remove(this.customColorElement);
             }
         });
 
-        var parametersFolder = gui.addFolder('Parameters');
+        const parametersFolder = gui.addFolder('Parameters');
 
         parametersFolder.add(tracker, 'minDimension', 1, 100);
         parametersFolder.add(tracker, 'minGroupSize', 1, 100);

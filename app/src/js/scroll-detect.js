@@ -7,10 +7,10 @@ export class scrollDetect {
     constructor(event, domNode) {
         event.preventDefault();
 
-        let orgEvent = event || window.event
-        let delta = 0
-        let returnValue = true
-        let deltaX = 0
+        const orgEvent = event || window.event;
+        let delta = 0;
+        const returnValue = true;
+        let deltaX = 0;
         let deltaY = 0;
 
         event = orgEvent;
@@ -39,9 +39,6 @@ export class scrollDetect {
         if (orgEvent.wheelDeltaX !== undefined) {
             deltaX = -1 * orgEvent.wheelDeltaX / 120;
         }
-        console.log(delta);
-        //  domNode.scrollLeft -= (delta * 10);
-        domNode.style.transform = `scale(${1+ (delta )})`
-
+        domNode.style.transform = `scale(${1 + delta})`;
     }
 }

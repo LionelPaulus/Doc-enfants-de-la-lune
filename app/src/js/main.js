@@ -1,87 +1,101 @@
-import {initGUIControllers} from "./color_camera_gui.js"
-import {scrollDetect} from "./scroll-detect.js"
+import { InitGUIControllers } from './color_camera_gui';
+// import { scrollDetect } from './scroll-detect';
 
-window.onload = function() {
-    var point = document.createElement('div');
-    point.className = "light";
-    document.body.appendChild(point)
 
-    var body = document.body,
-        html = document.documentElement;
+function hasGetUserMedia() {
+    return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia || navigator.msGetUserMedia);
+}
 
-    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-    var width = Math.max(body.scrollLeft, body.offsetWidth, html.clientWidth, html.scrollLeft, html.offsetWidth);
-    var totalWindow = height + width;
+const demoFlashlight = document.getElementsByClassName('demo-flashlight')[0];
+const torch = demoFlashlight.querySelector('img');
 
-    var video = document.getElementById('video');
-    var canvas = document.getElementById('canvas');
-    var context = canvas.getContext('2d');
+const debugDetection = false;
 
-    var tracker = new tracking.ColorTracker("magenta");
-    var trackerTask = tracking.track('#video', tracker, {camera: true});
-    var prevPos = {
-        x: 0,
-        y: 0
-    }
-    tracker.on('track', function(event) {
+if (hasGetUserMedia()) {
+    const point = document.createElement('div');
+    point.className = 'light';
+    document.body.appendChild(point);
+
+    // const body = document.body;
+    // const html = document.documentElement;
+    // const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    // const width = Math.max(body.scrollLeft, body.offsetWidth, html.clientWidth, html.scrollLeft, html.offsetWidth);
+    // const totalWindow = height + width;
+
+    // const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    const tracker = new tracking.ColorTracker('magenta');
+    const trackerTask = tracking.track('#video', tracker, {
+        camera: true,
+    });
+    // let prevPos = {
+    //     x: 0,
+    //     y: 0
+    // }
+    tracker.on('track', (event) => {
         if (event.data.length === 0)
-            return // No targets were detected in this frame.
+            return; // No targets were detected in this frame.
         context.clearRect(0, 0, canvas.width, canvas.height);
 
 
-
-        var rect = event.data[0];
+        // if tracking set up these vars
+        const rect = event.data[0];
         if (rect.color === 'custom') {
             rect.color = tracker.customColor;
         }
 
-        var totalRect = rect.height + rect.width;
-        var ratio = parseInt(totalRect / totalWindow * 100)
+        // const totalRect = rect.height + rect.width;
+        // const ratio = totalRect / totalWindow * 100;
 
-        //ZOOM
-        point.style.transform = `scale(${ratio / 10})`
-        if (ratio < 0.5) {
-            demoFlashlight.style.transform = `scale(1)`
+        const newPosLeft = ((canvas.width - rect.x) / canvas.width) * 100;
+        const newPosTop = (rect.y / canvas.height) * 100;
+
+
+
+
+
+        // ZOOM
+
+        // point.style.transform = `scale(${ratio / 10})`
+        // torch.style.transform = `scale(${ratio / 10})`
+
+        // RENDER TRACK
+        point.style.transform = `translate3d(${newPosLeft}vw ,${newPosTop}vh, 0`;
+        [].forEach.call(demoFlashlight.querySelectorAll('p'), (elem) => {
+            elem.style.transform = `translate3d(${(rect.x - 250) * -0.25}px , ${(rect.y - 250) * -0.25}px, 0px)`;
+        });
+
+        // FLASH LIGHT
+        torch.style.transform = `translate(${((canvas.width - rect.x - 100) / canvas.width) * 100}vw ,${newPosTop - 50}vh`;
+
+
+        if (debugDetection) {
+            context.strokeStyle = rect.color;
+            context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+            context.font = '11px Helvetica';
+            context.fillStyle = '#fff';
+            context.fillText(`x: ${rect.x}px`, rect.x + rect.width + 5, rect.y + 11);
+            context.fillText(`y: ${rect.y}px`, rect.y + rect.height + 5, rect.y + 22);
         }
-        else{
-             demoFlashlight.style.transform = `scale(${ratio / 10})`
-        }
-        //RENDER TRACK
-        point.style.left = (canvas.width - rect.x) / canvas.width * 100 + "%";
-        point.style.top = (rect.y / canvas.height * 100) + "%";
-        [].forEach.call(demoFlashlight.querySelectorAll('p'), function(elem){
-          elem.style.transform = `translate3d(${ (rect.x - 250) * -0.25}px , ${(rect.y - 250) * -0.25}px, 0px)`
-        })
-        //FLASH LIGHT
-        demoFlashlight.style.backgroundPosition = (canvas.width - rect.x) / canvas.width * 100 + "%" + (rect.y / canvas.height * 100) + "%";
 
-
-        context.strokeStyle = rect.color;
-        context.strokeRect(rect.x, rect.y, rect.width, rect.height);
-        context.font = '11px Helvetica';
-        context.fillStyle = "#fff";
-        context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
-        context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
-        //
-
-        prevPos = {
-            x: event.data[0].x,
-            y: event.data[0].y
-        }
+        // const prevPos = {
+        //     x: event.data[0].x,
+        //     y: event.data[0].y
+        // };
     });
-    console.log(trackerTask);
 
-    new initGUIControllers(tracker);
+    new InitGUIControllers(tracker);
+}
+demoFlashlight.onmousemove = (e) => {
+    torch.style.transform = `translate(${(e.pageX - 250)}px ,${e.pageY - 500}px)`;
+    [].forEach.call(demoFlashlight.querySelectorAll('p'), (elem) => {
+        elem.style.transform = `translate3d(${(e.pageX - 250) * -0.25}px , ${(e.pageY - 250) * -0.25}px, 0px)`;
+    });
 };
-var demoFlashlight = document.getElementsByClassName("demo-flashlight")[0];
 
-demoFlashlight.onmousemove = (function(e) {
-    demoFlashlight.style.backgroundPosition = (e.pageX - 250) + 'px ' + (e.pageY - 250) + 'px';
-    [].forEach.call(demoFlashlight.querySelectorAll('p'), function(elem){
-      elem.style.transform = `translate3d(${ (e.pageX - 250) * -0.25}px , ${(e.pageY - 250) * -0.25}px, 0px)`
-    })
-  //  demoFlashlight.style.transform = `translate3d(${ (e.pageX - 250) * -0.25}px , ${(e.pageY - 250) * -0.25}px, 0px)`
-});
-demoFlashlight.onmousewheel = (function(e) {
-    //  let test = new scrollDetect(e, demoFlashlight);
-});
+// demoFlashlight.onmousewheel = (e) => {
+//     //  let test = new scrollDetect(e, demoFlashlight);
+// };
