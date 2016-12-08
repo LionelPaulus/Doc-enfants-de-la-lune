@@ -14,10 +14,14 @@
       "requireParamDescription": true,
       "requireReturnDescription": true
     }],
+    "indent": ["error", 4],
+    "func-names": ["error", "never"],
+    "space-infix-ops": ["error", {"int32Hint": false}],
+    "no-param-reassign":0,
     "require-jsdoc": ["error", {
         "require": {
-            "FunctionDeclaration": true,
-            "MethodDefinition": true,
+            "FunctionDeclaration": false,
+            "MethodDefinition": false,
             "ClassDeclaration": true
         }
     }]
