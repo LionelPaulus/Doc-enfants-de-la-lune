@@ -10,7 +10,7 @@ function hasGetUserMedia() {
 const demoFlashlight = document.getElementsByClassName('demo-flashlight')[0];
 const torch = demoFlashlight.querySelector('img');
 
-const debugDetection = false;
+const debugDetection = true;
 
 if (hasGetUserMedia()) {
     const point = document.createElement('div');

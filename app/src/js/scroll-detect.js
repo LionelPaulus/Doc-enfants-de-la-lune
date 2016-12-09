@@ -9,7 +9,6 @@ export class scrollDetect {
 
         const orgEvent = event || window.event;
         let delta = 0;
-        const returnValue = true;
         let deltaX = 0;
         let deltaY = 0;
 
