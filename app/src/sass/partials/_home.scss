@@ -1,4 +1,8 @@
-
+.home {
+  background: $black;
+  height: 100vh;
+  width: 100vw;
+}
 .home__grid {
   height: 100%;
   margin: auto;
@@ -6,7 +10,7 @@
 }
 
 .home__content {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .home__title {
@@ -18,4 +22,23 @@
 
 .home__mask {
   background: url('../media/img/mask.png');
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.home__btn {
+  margin-top: 60px;
+}
+
+.home__btnTxt {
+  background: $title;
+  border:none;
+  display: block;
+  margin: 0 auto;
+  padding:10px;
+  text-align: center;
+  text-transform: uppercase;
 }
