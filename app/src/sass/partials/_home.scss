@@ -1,0 +1,26 @@
+.home {
+  background: $black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home__grid {
+  height: 100%;
+  margin: auto;
+  width: 60%;
+}
+
+.home__content {
+  padding-top: 100px;
+}
+
+.home__title {
+  color: $title;
+  font-size: .6em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home__mask {
+  background: url('../media/img/mask.png');
+}
