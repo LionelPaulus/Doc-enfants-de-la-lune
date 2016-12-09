@@ -70,5 +70,5 @@ gulp.task('dev', ['sync', 'sass', 'webpack'], () => {
 gulp.task('default', ["dev"])
 
 gulp.task("importFonts", () => {
-    gulp.src("./app/src/font/*").pipe(gulp.dest("./app/dist/font/"));
+    gulp.src("./app/src/media/fonts/*").pipe(gulp.dest("./app/dist/media/fonts/"));
 });
