@@ -35,7 +35,7 @@
 .home__btn {
   font-family: $btn-txt-font-family;
   font-weight: 600;
-  margin-top: 50px;
+  margin-top: 5vh;
 }
 
 .home__btnTxt {
@@ -59,11 +59,15 @@
   justify-content: center;
   width: 100vw;
 
+  .flex {
+    display: flex;
+  }
+
   .instructions {
-    max-width: 50%;
+    color: $white;
+    text-align: center;
 
     .instructions__title {
-      color: $white;
       font-family: $title-font-family;
       font-size: 30px;
 
@@ -91,12 +95,10 @@
     }
 
     .instructions__status {
-      color: $white;
-      font-size: 43px;
       font-family: $status-font-family;
+      font-size: 43px;
       margin-bottom: 5vh;
       margin-top: 5vh;
-      text-align: center;
       text-transform: uppercase;
 
       &.detected {
@@ -121,6 +123,36 @@
           position: absolute;
           width: 25px;
         }
+      }
+    }
+
+    .instructions__steps {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 50%;
+
+      h2 {
+        font-family: $title-font-family;
+        font-size: 27px;
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+      }
+
+      p {
+        font-family: $content-font-family;
+      }
+
+      .firststep {
+
+      }
+
+      .secondstep {
+
+      }
+
+      .url {
+        color: $mauve;
+        margin-top: 2vh;
       }
     }
   }
