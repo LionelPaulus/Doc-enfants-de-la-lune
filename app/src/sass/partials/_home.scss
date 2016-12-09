@@ -50,3 +50,78 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+.quickstart {
+  align-items: center;
+  background: $black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+
+  .instructions {
+    max-width: 50%;
+
+    .instructions__title {
+      color: $white;
+      font-family: $title-font-family;
+      font-size: 30px;
+
+      &::before {
+        background: linear-gradient(to right, $true-black, $white);
+        border-radius: 25px;
+        content: '';
+        height: 2px;
+        margin-left: -150px;
+        margin-top: 10px;
+        position: absolute;
+        width: 118px;
+      }
+
+      &::after {
+        background: linear-gradient(to right, $white, $true-black);
+        border-radius: 25px;
+        content: '';
+        height: 2px;
+        margin-left: 30px;
+        margin-top: 10px;
+        position: absolute;
+        width: 118px;
+      }
+    }
+
+    .instructions__status {
+      color: $white;
+      font-size: 43px;
+      font-family: $status-font-family;
+      margin-bottom: 5vh;
+      margin-top: 5vh;
+      text-align: center;
+      text-transform: uppercase;
+
+      &.detected {
+        &::before {
+          background-image: url('../media/img/smartphone-ok.svg');
+          content: '';
+          height: 47px;
+          margin-left: -50px;
+          margin-top: 5px;
+          position: absolute;
+          width: 25px;
+        }
+      }
+
+      &.not-detected {
+        &::before {
+          background-image: url('../media/img/smartphone-notok.svg');
+          content: '';
+          height: 47px;
+          margin-left: -50px;
+          margin-top: 5px;
+          position: absolute;
+          width: 25px;
+        }
+      }
+    }
+  }
+}
