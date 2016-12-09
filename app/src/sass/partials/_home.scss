@@ -3,6 +3,7 @@
   height: 100vh;
   width: 100vw;
 }
+
 .home__grid {
   align-items: center;
   display: flex;
@@ -10,10 +11,6 @@
   justify-content: center;
   margin: auto;
   width: 60%;
-}
-
-.home__divider {
-   background-image: linear-gradient(top, white, white, white);
 }
 
 .home__title {
@@ -29,7 +26,7 @@
   width: 100%;
 }
 
-.home__mask__img{
+.home__mask__img {
   display: block;
   height: 100%;
   margin: auto;
