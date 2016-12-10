@@ -1,5 +1,9 @@
 severity: error
-
+rules :
+    mixin-name-format : false
+    class-name-format : false
+    no-important : false
+    empty-line-between-blocks: false
 linters:
   BorderZero:
     enabled: true
