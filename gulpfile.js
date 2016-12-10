@@ -44,7 +44,7 @@ gulp.task("importDatas", () => {
 
 });
 gulp.task("importImages", () => {
-
+  gulp.src("./app/src/media/img/*").pipe(gulp.dest("./app/dist/media/img/"));
 });
 gulp.task("importVideos", () => {
 
