@@ -1,0 +1,72 @@
+@mixin Moon {
+  .moon {
+    @include MoonPosition;
+    @include MoonGlobe;
+    @include MoonTimeline;
+    @include MoonCursor;
+  }
+}
+
+@mixin MoonPosition {
+  bottom: 0;
+  display: flex;
+  height: $moon-size !important;
+  justify-content: center;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  transform: translateY(70%);
+  width: $moon-size !important;
+}
+
+
+
+@mixin MoonGlobe {
+  .rs-container {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .rs-bg-color {
+    background: transparent url('https://www.nasa.gov/sites/default/files/thumbnails/image/christmas2015fullmoon.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .rs-path {
+    background: transparent !important;
+  }
+  .rs-block {
+    .rs-inner {
+      height: $moon-globe-ratio;
+      margin: 5% auto;
+      width: $moon-globe-ratio;
+    }
+  }
+}
+
+@mixin MoonTimeline {
+  .rs-seperator {
+    border: 0;
+  }
+  .rs-border {
+    border-color: $moon-color;
+  }
+  .rs-inner {
+    &.rs-border {
+      border: 0;
+    }
+  }
+}
+
+@mixin MoonCursor {
+  .rs-handle {
+    background-color:$moon-color;
+    box-shadow:
+    0 0 0 5px rgba(255, 255, 255, 1),
+    0 0 0 10px  rgba(255, 255, 255, .45),
+    0 0 0 15px rgba(255, 255, 255, .65);
+    margin-left: -10px!important;
+
+  }
+}
+
+@include Moon;
