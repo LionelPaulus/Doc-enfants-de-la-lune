@@ -1,6 +1,7 @@
 import { InitGUIControllers } from './color_camera_gui';
 import { DomManipulator } from './models/class.dom-manipulator';
 import { MoonTimeline } from './modules/moon-timeline';
+import { RythmAlarm } from './modules/rythm-alarm';
 // import { scrollDetect } from './scroll-detect';
 
 
@@ -11,8 +12,11 @@ const page = location.pathname.replace('.html', '').replace('/', '');
 
 switch (page) {
   case 'moon-test':
+    new MoonTimeline();
+  break;
   case 'rythm':
     new MoonTimeline();
+    new RythmAlarm();
   break;
 
 }
