@@ -6,6 +6,8 @@ import { RythmAlarm } from './modules/rythm-alarm';
 
 
 window.ø = new DomManipulator();
+const ø = window.ø;
+
 const demoFlashlight = document.getElementsByClassName('demo-flashlight')[0];
 const page = location.pathname.replace('.html', '').replace('/', '');
 
@@ -16,7 +18,7 @@ switch (page) {
   break;
   case 'rythm':
     new MoonTimeline();
-    new RythmAlarm();
+    new RythmAlarm(ø.id('alarm'));
   break;
 
 }

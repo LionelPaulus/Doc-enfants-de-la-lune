@@ -8,15 +8,15 @@
 }
 
 @mixin MoonPosition {
-  bottom: 0;
+  bottom: -20%;
   display: flex;
   height: $moon-size !important;
   justify-content: center;
   left: 0;
   margin: auto;
-  position: fixed;
+  position: absolute;
   right: 0;
-  transform: translateY(80%);
+  transform: translateY(-5%);
   width: $moon-size !important;
 }
 
@@ -35,9 +35,10 @@
     background: transparent !important;
   }
   .rs-block {
+    padding: 0!important;
     .rs-inner {
       height: $moon-globe-ratio;
-      margin: 5% auto;
+      margin: 0% auto;
       width: $moon-globe-ratio;
     }
   }

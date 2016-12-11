@@ -1,15 +1,30 @@
-@import 'components/moon-timeline';
-
 .page-title {
-  padding-top:2em;
+  height: 120px;
+  padding-left: 2em;
+  padding-top: 2em;
+
   h1 {
     font-family: $status-font-family;
     font-size: 2.666667em;
+    left: 1.5em;
     position: relative;
     top: 1.5em;
-    left: 1.5em;
   }
   &-illu {
     position: absolute;
   }
 }
+
+.page-legend {
+  font-family: $btn-txt-font-family;
+  line-height: 1.5;
+  margin: auto;
+  margin-top: 3em;
+  max-width: 550px;
+  text-align: justify;
+  width: $moon-size;
+}
+
+
+@import 'components/moon-timeline';
+@import 'components/alarm';
