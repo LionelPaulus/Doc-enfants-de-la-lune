@@ -2,3 +2,5 @@ node_modules/
 dist/
 app/src/vendor/libs/
 **/npm-debug.log
+
+app/src/sass/partials/_home.scss

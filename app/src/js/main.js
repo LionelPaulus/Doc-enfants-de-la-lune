@@ -1,11 +1,11 @@
 import { InitGUIControllers } from './color_camera_gui';
 import { DomManipulator } from './models/class.dom-manipulator';
 import { MoonTimeline } from './modules/moon-timeline';
-
 // import { scrollDetect } from './scroll-detect';
+
+
 window.ø = new DomManipulator();
 const demoFlashlight = document.getElementsByClassName('demo-flashlight')[0];
-
 const page = location.pathname.replace('.html', '').replace('/', '');
 
 
@@ -15,10 +15,6 @@ switch (page) {
     new MoonTimeline();
   break;
 
-}
-// test moon-timeline component
-if (location.pathname.replace('.html', '') === '/moon-test') {
-  window.moon = new MoonTimeline(ø.el('.moon'));
 }
 
 // detect webcam

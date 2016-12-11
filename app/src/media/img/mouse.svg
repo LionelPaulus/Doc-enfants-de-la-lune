@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="54px" viewBox="0 0 34 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>souris</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2_MOBILE" transform="translate(-879.000000, -654.000000)" fill="#000000">
+            <g id="POP-UP">
+                <g id="Group-3" transform="translate(644.000000, 404.000000)">
+                    <path d="M252,250 C242.618519,250 235,257.618519 235,267 L235,286.203704 C235,295.585185 242.618519,303.203704 252,303.203704 C261.381481,303.203704 269,295.585185 269,286.203704 L269,267 C269,257.618519 261.318519,250 252,250 Z M253.888889,270.840741 C253.888889,271.911111 253.07037,272.72963 252,272.72963 C250.92963,272.72963 250.111111,271.911111 250.111111,270.840741 L250.111111,263.725926 C250.111111,262.655556 250.92963,261.837037 252,261.837037 C253.07037,261.837037 253.888889,262.655556 253.888889,263.725926 L253.888889,270.840741 Z" id="souris"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
