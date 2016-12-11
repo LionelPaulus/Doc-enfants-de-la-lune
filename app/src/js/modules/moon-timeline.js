@@ -14,7 +14,7 @@ export class MoonTimeline {
 
     this.$.container.roundSlider({
       sliderType: 'default',
-      value: 10,
+      value: 15,
       width: 18,
     });
   }

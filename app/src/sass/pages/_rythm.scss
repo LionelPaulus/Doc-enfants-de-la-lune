@@ -1,1 +1,15 @@
 @import 'components/moon-timeline';
+
+.page-title {
+  padding-top:2em;
+  h1 {
+    font-family: $status-font-family;
+    font-size: 2.666667em;
+    position: relative;
+    top: 1.5em;
+    left: 1.5em;
+  }
+  &-illu {
+    position: absolute;
+  }
+}
