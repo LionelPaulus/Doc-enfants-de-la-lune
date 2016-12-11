@@ -8,7 +8,7 @@ const demoFlashlight = document.getElementsByClassName('demo-flashlight')[0];
 
 
 // test moon-timeline component
-if (location.pathname.replace('.html', '' === '/moon-test.html')) {
+if (location.pathname.replace('.html', '') === '/moon-test') {
   window.moon = new MoonTimeline(ø.el('.moon'));
 }
 
