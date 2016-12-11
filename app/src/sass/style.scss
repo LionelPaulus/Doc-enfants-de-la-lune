@@ -7,6 +7,10 @@
 // |   |-- typography.scss
 // |   |-- colors.scss
 // |
+// |-- pages/
+// |   |-- about-us.scss
+// |   |-- contact.scss
+// |
 // |-- partials/             # Partials
 // |   |-- _base.sass           # imports for all mixins + global project variables
 // |   |-- _reset.scss          # reset
@@ -21,5 +25,3 @@
 // `-- style.scss            # primary Sass file
 
 @import 'partials/base';
-@import 'partials/demo';
-@import 'partials/home';
