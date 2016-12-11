@@ -1,0 +1,54 @@
+@mixin page-commands {
+  .page-commands {
+    & > div {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    & > .previous {
+      @include page-commands-previous;
+    }
+    & > .next {
+      @include page-commands-next;
+    }
+    .bar {
+      @include page-commands-bar;
+    }
+    .label {
+      @include page-commands-label
+    }
+  }
+}
+
+
+
+@mixin page-commands-bar {
+  background: $white;
+  display: inline-block;
+  height: 10px;
+  max-width: 120px;
+  width: 10vw;
+}
+@mixin page-commands-previous {
+  left: 0;
+  &:hover .label {
+    transform: translateX(5px);
+  }
+}
+@mixin page-commands-next {
+  right: 0;
+  &:hover .label {
+    transform: translateX(-5px);
+  }
+}
+@mixin page-commands-label {
+  color: $white;
+  display: inline-block;
+  font-family: $content-font-family;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: transform .15s;
+}
+
+
+@include page-commands;
