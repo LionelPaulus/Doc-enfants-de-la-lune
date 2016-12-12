@@ -8,7 +8,7 @@
 }
 
 @mixin MoonPosition {
-  bottom: -20%;
+  bottom: -15%;
   display: flex;
   height: $moon-size !important;
   justify-content: center;
@@ -28,8 +28,7 @@
     width: 100% !important;
   }
   .rs-bg-color {
-    background: transparent url('http://vignette3.wikia.nocookie.net/wingsoffirefanon/images/9/94/Full_Moon.png/revision/latest?cb=20151213005615') center center no-repeat;
-    background-size: 120%;
+
   }
   .rs-path {
     background: transparent !important;
@@ -38,8 +37,10 @@
     padding: 0!important;
     .rs-inner {
       height: $moon-globe-ratio;
-      margin: 0% auto;
+      margin: 5% auto;
       width: $moon-globe-ratio;
+      background:white;
+      background-size: 100%;
     }
   }
 }
