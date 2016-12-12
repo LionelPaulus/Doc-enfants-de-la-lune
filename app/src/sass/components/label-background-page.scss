@@ -1,7 +1,7 @@
 @mixin labelBackgroundPage {
   .background-text {
     color: $background-text;
-    font-family: $body-text-font-family;
+    font-family: $label-page-font-family;
     font-size: 220px;
     font-weight: bold;
     line-height: 1;
