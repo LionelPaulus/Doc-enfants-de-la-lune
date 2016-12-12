@@ -16,13 +16,37 @@
 .home__title {
   color: $white;
   font-family: $title-font-family;
-  font-size: .75em;
-  text-align: center;
+  font-size: 23px;
+
+  h1 {
+    &::before {
+      background: linear-gradient(to right, $true-black, $white);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: -150px;
+      margin-top: 8px;
+      position: absolute;
+      width: 118px;
+    }
+
+    &::after {
+      background: linear-gradient(to right, $white, $true-black);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: 30px;
+      margin-top: 8px;
+      position: absolute;
+      width: 118px;
+    }
+  }
 }
 
 .home__mask {
   height: 350px;
-  margin-top: 30px;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
   width: 100%;
 }
 
@@ -33,7 +57,7 @@
 }
 
 .home__btn {
-  font-family: $btn-txt-font-family;
+  font-family: $title-font-family;
   font-weight: 600;
   margin-top: 5vh;
 }
@@ -44,9 +68,13 @@
   color: $white;
   cursor: pointer;
   display: block;
+  font-size: 12px;
   margin: 0 auto;
   outline: none;
-  padding: 10px;
+  padding-bottom: 13px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 13px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -61,6 +89,7 @@
 
   .flex {
     display: flex;
+    min-width: 1000px;
   }
 
   .instructions {
@@ -69,7 +98,7 @@
 
     .instructions__title {
       font-family: $title-font-family;
-      font-size: 30px;
+      font-size: 23px;
 
       &::before {
         background: linear-gradient(to right, $true-black, $white);
@@ -96,9 +125,9 @@
 
     .instructions__status {
       font-family: $status-font-family;
-      font-size: 43px;
-      margin-bottom: 5vh;
-      margin-top: 5vh;
+      font-size: 33px;
+      margin-bottom: 5.5vh;
+      margin-top: 5.5vh;
       text-transform: uppercase;
 
       &.detected {
@@ -107,7 +136,7 @@
           content: '';
           height: 47px;
           margin-left: -50px;
-          margin-top: 5px;
+          margin-top: -5px;
           position: absolute;
           width: 25px;
         }
@@ -119,7 +148,7 @@
           content: '';
           height: 47px;
           margin-left: -50px;
-          margin-top: 5px;
+          margin-top: -5px;
           position: absolute;
           width: 25px;
         }
@@ -131,15 +160,22 @@
       padding-right: 15px;
       width: 50%;
 
+      img {
+        height: 40vh;
+      }
+
       h2 {
         font-family: $title-font-family;
-        font-size: 27px;
+        font-size: 20px;
         margin-bottom: 2vh;
-        margin-top: 2vh;
+        margin-top: 3.5vh;
       }
 
       p {
         font-family: $content-font-family;
+        font-size: 16px;
+        font-weight: 100;
+        letter-spacing: 1px;
       }
 
       .firststep {
@@ -157,12 +193,25 @@
     }
   }
 
+  .overlay {
+    background-color: $true-black; // Black fallback
+    background-color: $overlay; // Black w/opacity
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   .popup {
     background-color: $white;
     border-radius: 25px;
+    display: none;
     left: 50%;
-    min-width: 920px;
-    padding: 20px;
+    min-width: 800px;
+    padding: 35px;
+    padding-bottom: 20px;
     position: fixed;
     text-align: center;
     top: 50%;
@@ -172,7 +221,7 @@
     .popup__title {
       color: $mauve;
       font-family: $status-font-family;
-      font-size: 30px;
+      font-size: 23px;
       text-transform: uppercase;
 
       &::before {
@@ -181,7 +230,7 @@
         content: '';
         height: 2px;
         margin-left: -150px;
-        margin-top: 18px;
+        margin-top: 10px;
         position: absolute;
         width: 118px;
       }
@@ -192,7 +241,7 @@
         content: '';
         height: 2px;
         margin-left: 30px;
-        margin-top: 18px;
+        margin-top: 10px;
         position: absolute;
         width: 118px;
       }
@@ -200,22 +249,25 @@
 
     .popup__subtitle {
       font-family: $title-font-family;
-      font-size: 27px;
-      margin: 3vh;
+      font-size: 20px;
+      margin: 3.5vh;
     }
 
     .popup__content {
-      font-size: 20px;
+      font-family: $content-font-family;
+      font-size: 17px;
       margin-bottom: 3vh;
+      line-height: 17px;
     }
 
     .popup__link {
       color: $grey;
       font-family: $title-font-family;
-      font-size: 15px;
+      font-size: 12px;
 
       img {
         margin-top: 1vh;
+        width: 3vh;
       }
     }
   }
