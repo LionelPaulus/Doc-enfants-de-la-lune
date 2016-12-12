@@ -1,0 +1,16 @@
+@mixin btn {
+  background: none;
+  border: thin solid $white;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  margin: 0 auto;
+  outline: none;
+  padding-bottom: 13px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 13px;
+  text-align: center;
+  text-transform: uppercase;
+}
