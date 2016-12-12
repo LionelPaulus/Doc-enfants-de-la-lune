@@ -1,13 +1,14 @@
 .page {
-  background: $black;
+  background: $page-gradient;
+  color: $white;
   height: 100vh;
+  overflow: hidden;
   width: 100vw;
-  color:$white;
 }
 
 .page-content {
+  margin: auto;
   width: 60%;
-  margin:auto;
 }
 
 @import 'components/label-background-page';
