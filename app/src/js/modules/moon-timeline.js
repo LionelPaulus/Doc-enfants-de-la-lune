@@ -5,7 +5,6 @@ export class MoonTimeline {
 
     this.$ = {};
 
-    // <div id='moon' class='moon'></div>
     const MoonDomNode = document.createElement('div');
     MoonDomNode.id = 'moon';
     MoonDomNode.className = 'moon';
@@ -15,7 +14,7 @@ export class MoonTimeline {
 
     this.$.container.roundSlider({
       sliderType: 'default',
-      value: 10,
+      value: 18,
       width: 18,
     });
   }

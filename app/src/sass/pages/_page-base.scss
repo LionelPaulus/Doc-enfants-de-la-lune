@@ -1,10 +1,16 @@
 .page {
-  background: $black;
-  display: flex;
+  background: $page-gradient;
+  background-size: 100% 100%;
+  color: $white;
   height: 100vh;
+  overflow: hidden;
   width: 100vw;
 }
 
+.page-content {
+  margin: auto;
+  width: 60%;
+}
 
 @import 'components/label-background-page';
 @import 'components/page-commands';

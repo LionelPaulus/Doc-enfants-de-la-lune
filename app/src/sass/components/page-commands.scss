@@ -25,9 +25,9 @@
 @mixin page-commands-bar {
   background: $white;
   display: inline-block;
-  height: 10px;
-  max-width: 120px;
-  width: 10vw;
+  height: 5px;
+  min-width: 50px;
+  width: 4vw;
 }
 @mixin page-commands-previous {
   left: 0;
@@ -45,6 +45,9 @@
   color: $white;
   display: inline-block;
   font-family: $content-font-family;
+  font-size: 15px;
+  font-weight: $fix-futura-book-weight;
+  letter-spacing: .5px;
   margin: 0 5px;
   text-decoration: none;
   transition: transform .15s;
