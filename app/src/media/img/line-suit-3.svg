@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="214px" height="43px" viewBox="0 0 214 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>trait</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="32.7709703%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="STAGE_3" transform="translate(-496.000000, -493.000000)">
+            <g id="module_4" transform="translate(195.000000, 449.000000)">
+                <g id="trait" transform="translate(408.000000, 65.500000) scale(-1, 1) translate(-408.000000, -65.500000) translate(301.000000, 44.000000)">
+                    <polyline id="Path-3-Copy" stroke="#B61282" stroke-width="1.5" transform="translate(107.000000, 21.750000) scale(-1, 1) translate(-107.000000, -21.750000) " points="6 6 126 6 208 37.5"></polyline>
+                    <circle id="Oval-Copy-2" fill-opacity="0.949999988" fill="url(#radialGradient-1)" transform="translate(5.500000, 37.500000) scale(-1, 1) translate(-5.500000, -37.500000) " cx="5.5" cy="37.5" r="5.5"></circle>
+                    <circle id="Oval-Copy-3" fill-opacity="0.949999988" fill="url(#radialGradient-1)" transform="translate(208.500000, 5.500000) scale(-1, 1) translate(-208.500000, -5.500000) " cx="208.5" cy="5.5" r="5.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

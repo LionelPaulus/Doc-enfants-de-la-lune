@@ -14,10 +14,13 @@ const page = location.pathname.replace('.html', '').replace('/', '');
 
 switch (page) {
   case 'moon-test':
-    new MoonTimeline();
+    new MoonTimeline('-90%');
+  break;
+  case 'suit':
+    new MoonTimeline('-90%');
   break;
   case 'rythm':
-    new MoonTimeline();
+    new MoonTimeline('-12.5%');
     new RythmAlarm(ø.id('alarm'));
   break;
 
