@@ -4,6 +4,26 @@
   position: relative;
   width: 60%;
 }
+.page-title {
+
+  h1 {
+    font-family: $status-font-family;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+    top: 1em;
+
+
+  }
+  &-illu {
+    height: 72.5px;
+    left: -12px;
+    position: absolute;
+    top:2px;
+  }
+}
 
 .sport__content {
   margin-top:60px;
@@ -11,12 +31,6 @@
 
 .sport__txt__video {
   margin-top: 30px;
-}
-
-.sport__title {
-  position: relative;
-  width: 100%;
-  z-index: 2;
 }
 
 .sport__title__txt {
@@ -27,14 +41,6 @@
   letter-spacing: 1px;
   margin-top:10px;
   text-transform: uppercase;
-}
-
-.icone__lune{
-  left: -48px;
-  position: absolute;
-  top: -35px;
-  width: 60px;
-  z-index: -1;
 }
 
 .sport__video__container {
@@ -70,9 +76,11 @@
 .sport__txt {
   color: $white;
   font-family: $content-font-family;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: $fix-futura-book-weight;
   letter-spacing: 1px;
-  line-height: 25px;
+  line-height: 18px;
+  padding-top: 30px;
   text-align: left;
 }
 
