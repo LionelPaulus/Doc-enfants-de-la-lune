@@ -5,6 +5,10 @@
   width: 60%;
 }
 
+.sport__content {
+  margin-top:60px;
+}
+
 .sport__txt__video {
   margin-top: 30px;
 }
@@ -18,22 +22,25 @@
 .sport__title__txt {
   color: $white;
   font-family: $status-font-family;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top:10px;
   text-transform: uppercase;
 }
 
 .icone__lune{
-  left: -40px;
+  left: -48px;
   position: absolute;
-  top: -40px;
+  top: -35px;
   width: 60px;
   z-index: -1;
 }
 
 .sport__video__container {
   position: absolute;
-  right: -70px;
-  top: -30px  ;
+  right: -60px;
+  top: -9px;
 }
 
 .filter__video {
@@ -45,19 +52,25 @@
 }
 
 .video__sport {
-  width: 450px;
+  height: 220px;
+}
+
+.video__infos {
+  margin-left: 40px;
+  padding-top: 15px;
 }
 
 .sport__description {
-  margin-top: 30px;
+  margin-top: 45px;
   position: relative;
-  width: 60%;
+  width: 70%;
   z-index: 2;
 }
 
 .sport__txt {
   color: $white;
   font-family: $content-font-family;
+  font-size: 14px;
   letter-spacing: 1px;
   line-height: 25px;
   text-align: left;
@@ -65,14 +78,15 @@
 
 .step__sport {
   color: $white;
-  display: flex;
-  margin-top: 100px;
+  margin-top: 60px;
   padding-left: 5%;
   padding-right: 5%;
+  text-align: center;
 }
 
 .step {
-  flex: 1;
+  width: 190px;
+  display: inline-block;
 }
 
 .light {
@@ -86,8 +100,9 @@
 .step__title {
   color: $white;
   font-family: $content-font-family;
-  font-size: 25px;
+  font-size: 21px;
   letter-spacing: 2px;
+  margin-top: 30px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -97,23 +112,28 @@
   height: 1px;
   margin: auto;
   margin-bottom: 20px;
-  width: 30%;
+  margin-top: 10px;
+  width: 20%;
 }
 
 .big-divider {
   background: $mauve;
-  height: 6px;
+  height: 5px;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 20px;
+  width:85%;
 }
 
 
 .step-description {
   font-family: $content-font-family;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 200;
   letter-spacing: 1px;
+  line-height: 16px;
   margin: auto;
   text-align: center;
-  width: 50%;
+  width: 70%;
 }
+
+// @import 'components/moon-timeline';
