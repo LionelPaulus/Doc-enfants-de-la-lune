@@ -17,6 +17,7 @@ switch (page) {
     new MoonTimeline();
   break;
   case 'rythm':
+  case 'sport':
     new MoonTimeline();
     new RythmAlarm(ø.id('alarm'));
   break;

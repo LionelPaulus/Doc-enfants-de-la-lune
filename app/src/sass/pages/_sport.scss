@@ -1,0 +1,119 @@
+.sport__grid {
+  align-items: center;
+  margin: auto;
+  position: relative;
+  width: 60%;
+}
+
+.sport__txt__video {
+  margin-top: 30px;
+}
+
+.sport__title {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.sport__title__txt {
+  color: $white;
+  font-family: $status-font-family;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.icone__lune{
+  left: -40px;
+  position: absolute;
+  top: -40px;
+  width: 60px;
+  z-index: -1;
+}
+
+.sport__video__container {
+  position: absolute;
+  right: -70px;
+  top: -30px  ;
+}
+
+.filter__video {
+  background: $mauve;
+  height: 99%;
+  opacity: .4;
+  position: absolute;
+  width: 100%;
+}
+
+.video__sport {
+  width: 450px;
+}
+
+.sport__description {
+  margin-top: 30px;
+  position: relative;
+  width: 60%;
+  z-index: 2;
+}
+
+.sport__txt {
+  color: $white;
+  font-family: $content-font-family;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-align: left;
+}
+
+.step__sport {
+  color: $white;
+  display: flex;
+  margin-top: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.step {
+  flex: 1;
+}
+
+.light {
+  opacity: 1;
+}
+
+.dark {
+  opacity: .1;
+}
+
+.step__title {
+  color: $white;
+  font-family: $content-font-family;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.small-divider {
+  background: $mauve;
+  height: 1px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.big-divider {
+  background: $mauve;
+  height: 6px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+
+.step-description {
+  font-family: $content-font-family;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
