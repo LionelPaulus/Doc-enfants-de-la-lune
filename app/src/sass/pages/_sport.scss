@@ -1,41 +1,64 @@
 .sport__grid {
-  height: 100%;
+  align-items: center;
   margin: auto;
-  padding-top: 70px;
+  position: relative;
   width: 60%;
 }
 
 .sport__txt__video {
-  width: 60%;
+  margin-top: 30px;
 }
 
 .sport__title {
-  padding-top: 40px;
+  position: relative;
   width: 100%;
+  z-index: 2;
 }
 
 .sport__title__txt {
-  color:$white;
-  font-family: $content-font-family;
-  font-size: 30px;
+  color: $white;
+  font-family: $status-font-family;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
-.sport__img {
+.icone__lune{
+  left: -70px;
+  position: absolute;
+  top: -70px;
+  z-index: -1;
+}
 
+.sport__video__container {
+  position: absolute;
+  right: -70px;
+  top: -30px  ;
+}
+
+.filter__video {
+  background: $mauve;
+  height: 99%;
+  opacity: .4;
+  position: absolute;
+  width: 100%;
 }
 
 .video__sport {
-  height: 100%;
+  width: 450px;
 }
 
 .sport__description {
   margin-top: 30px;
+  position: relative;
+  width: 60%;
+  z-index: 2;
 }
 
 .sport__txt {
   color: $white;
   font-family: $content-font-family;
+  letter-spacing: 1px;
+  line-height: 25px;
   text-align: left;
 }
 
@@ -62,14 +85,15 @@
 .step__title {
   color: $white;
   font-family: $content-font-family;
-  font-size: 30px;
+  font-size: 25px;
+  letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .small-divider {
   background: $mauve;
-  height: 3px;
+  height: 1px;
   margin: auto;
   margin-bottom: 20px;
   width: 30%;
@@ -86,6 +110,8 @@
 .step-description {
   font-family: $content-font-family;
   font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
   margin: auto;
   text-align: center;
   width: 50%;

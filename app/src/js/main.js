@@ -10,6 +10,7 @@ const page = location.pathname.replace('.html', '').replace('/', '');
 switch (page) {
   case 'moon-test':
   case 'rythm':
+  case 'sport':
     new MoonTimeline();
   break;
 }
