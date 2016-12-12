@@ -12,5 +12,11 @@
   width: 60%;
 }
 
-@import 'components/label-background-page';
+.background-text {
+  height: 100%;
+  margin-left: 10vw;
+  position: absolute;
+  width: 15vw;
+}
+
 @import 'components/page-commands';
