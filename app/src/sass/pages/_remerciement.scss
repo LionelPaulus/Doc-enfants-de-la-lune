@@ -1,6 +1,6 @@
 .page-title {
   height: 100px;
-  padding-top: 5vh;
+  padding-top: 3vh;
   h1 {
     font-family: $status-font-family;
     font-size: 1.3em;
@@ -24,7 +24,7 @@
 }
 
 .realisatrice {
-  height: 200px;
+  height: auto;
   width: 50%;
   & h1 {
     color: $white;
@@ -33,11 +33,16 @@
     letter-spacing: 2px;
     margin-top: 10px;
     text-align: center;
+  }
+  & img {
+    display: block;
+    margin: auto;
+    width: 50%;
   }
 }
 
 .association {
-  height: 200px;
+  height: auto;
   width: 50%;
   & h1 {
     color: $white;
@@ -47,25 +52,13 @@
     margin-top: 10px;
     text-align: center;
   }
+  & img {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
 }
 
-.association_bg {
-  background: url('../media/img/asso_logo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  margin: auto;
-  width: 70%;
-}
-
-.realisatrice_bg {
-  background: url('../media/img/liza.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  margin: auto;
-  width: 70%;
-}
 
 
 .divider {
@@ -79,6 +72,7 @@
 
 .don {
   color: $white;
+  margin-top: 60px;
   padding-left: 3vw;
   h1 {
     font-family: $title-font-family;
@@ -140,9 +134,4 @@
   padding-top: 13px;
   text-align: center;
   text-decoration: none;
-}
-
-.clear {
-  display: block;
-  width: 100%;
 }
