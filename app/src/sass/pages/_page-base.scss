@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .page {
   background: $page-gradient;
   background-size: 100% 100%;
@@ -21,3 +25,4 @@
 }
 
 @import 'components/page-commands';
+@import 'components/label-background-page';
