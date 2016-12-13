@@ -113,6 +113,7 @@
   font-family: $title-font-family;
   font-weight: 600;
   margin-top: 5vh;
+  text-align: center;
 }
 
 .home__btnTxt {
@@ -120,7 +121,7 @@
   border: 1px solid $white;
   color: $white;
   cursor: pointer;
-  display: block;
+  // display: block;
   font-size: 12px;
   margin: 0 auto;
   outline: none;
@@ -129,7 +130,9 @@
   padding-right: 21px;
   padding-top: 13px;
   text-align: center;
-  text-transform: uppercase;
+  text-decoration: none;
+
+  //text-transform: uppercase;
 }
 
 .clear {
