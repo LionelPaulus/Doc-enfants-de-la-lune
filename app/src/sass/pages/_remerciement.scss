@@ -1,0 +1,137 @@
+.page-title {
+  height: 100px;
+  padding-top: 3vh;
+  h1 {
+    font-family: $status-font-family;
+    font-size: 1.3em;
+    font-weight: 400;
+    left: 2.25em;
+    position: relative;
+    text-transform: uppercase;
+    top: 1.75em;
+  }
+  &-illu {
+    height: 72.5px;
+    position: absolute;
+  }
+}
+
+.association__realisatrice {
+  display: flex;
+  padding-left: 3vw;
+  width: 100%;
+}
+
+.realisatrice {
+  width: 50%;
+  & h1 {
+    color: $white;
+    font-family: $content-font-family;
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  & img {
+    display: block;
+    height: 200px;
+    margin: auto;
+    width: 70%;
+  }
+}
+
+.association {
+  width: 50%;
+  & h1 {
+    color: $white;
+    font-family: $content-font-family;
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  & img {
+    display: block;
+    height: 200px;
+    margin: auto;
+    width: 70%;
+  }
+}
+
+.divider {
+  background: $mauve;
+  height: 3px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 50px;
+}
+
+.don {
+  color: $white;
+  margin-top: 40px;
+  padding-left: 3vw;
+  h1 {
+    font-family: $title-font-family;
+    font-size: 23px;
+    text-align: center;
+    &::before {
+      background: linear-gradient(to right, $true-black, $white);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: -150px;
+      margin-top: 8px;
+      position: absolute;
+      width: 118px;
+    }
+
+    &::after {
+      background: linear-gradient(to right, $white, $true-black);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: 30px;
+      margin-top: 8px;
+      position: absolute;
+      width: 118px;
+    }
+  }
+  & p {
+    font-family: $content-font-family;
+    font-size: 14px;
+    font-weight: $fix-futura-book-weight;
+    margin: auto;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    width:50%;
+  }
+}
+
+.home__btn {
+  font-family: $title-font-family;
+  font-weight: 600;
+  margin-top: 5vh;
+}
+
+.home__btnTxt {
+  background: none;
+  border: 1px solid $white;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  margin: 0 auto;
+  outline: none;
+  padding-bottom: 13px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 13px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.clear {
+  height:40px;
+}

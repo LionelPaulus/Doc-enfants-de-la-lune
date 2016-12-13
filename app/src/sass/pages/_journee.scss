@@ -2,7 +2,7 @@
 .day {
   display: flex;
   height: auto;
-  margin-top: 30px;
+  margin-top: 45px;
   max-width: 943px;
   position: relative;
   width: 100%;
@@ -14,7 +14,8 @@
     }
   }
 
-  &:nth-child(odd) {
+
+  &:nth-child(even) {
     > div:nth-child(1) {
       padding-right: 55px;
     }
@@ -24,7 +25,7 @@
     }
   };
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     > div:nth-child(1) {
       padding-left: 55px;
     }
