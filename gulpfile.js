@@ -17,7 +17,8 @@ gulp.task('webpack', () => {
 
 
 gulp.task('vendor', () => {
-    gulp.src('app/src/vendor/**/*.js').pipe(uglify()).pipe(gulp.dest('app/dist/vendor'))
+  //  gulp.src('app/src/vendor/**/*.js').pipe(uglify()).pipe(gulp.dest('app/dist/vendor'))
+    gulp.src('app/src/vendor/**/*.js').pipe(gulp.dest('app/dist/vendor'))
 });
 
 
