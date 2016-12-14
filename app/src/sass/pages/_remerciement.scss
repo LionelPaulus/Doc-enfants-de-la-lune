@@ -1,6 +1,6 @@
 .page-title {
   height: 100px;
-  padding-top: 3vh;
+  padding-top: 5vh;
   h1 {
     font-family: $status-font-family;
     font-size: 1.3em;
@@ -17,12 +17,14 @@
 }
 
 .association__realisatrice {
+  align-items: center;
   display: flex;
   padding-left: 3vw;
   width: 100%;
 }
 
 .realisatrice {
+  height: 200px;
   width: 50%;
   & h1 {
     color: $white;
@@ -31,16 +33,11 @@
     letter-spacing: 2px;
     margin-top: 10px;
     text-align: center;
-  }
-  & img {
-    display: block;
-    height: 200px;
-    margin: auto;
-    width: 70%;
   }
 }
 
 .association {
+  height: 200px;
   width: 50%;
   & h1 {
     color: $white;
@@ -50,13 +47,26 @@
     margin-top: 10px;
     text-align: center;
   }
-  & img {
-    display: block;
-    height: 200px;
-    margin: auto;
-    width: 70%;
-  }
 }
+
+.association_bg {
+  background: url('../media/img/asso_logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: auto;
+  width: 70%;
+}
+
+.realisatrice_bg {
+  background: url('../media/img/liza.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: auto;
+  width: 70%;
+}
+
 
 .divider {
   background: $mauve;
@@ -69,7 +79,6 @@
 
 .don {
   color: $white;
-  margin-top: 40px;
   padding-left: 3vw;
   h1 {
     font-family: $title-font-family;
@@ -101,11 +110,11 @@
     font-family: $content-font-family;
     font-size: 14px;
     font-weight: $fix-futura-book-weight;
+    letter-spacing: 1px;
     margin: auto;
     margin-top: 20px;
-    letter-spacing: 1px;
     text-align: center;
-    width:50%;
+    width: 50%;
   }
 }
 
@@ -131,10 +140,9 @@
   padding-top: 13px;
   text-align: center;
   text-decoration: none;
-
-  //text-transform: uppercase;
 }
 
 .clear {
-  height:40px;
+  display: block;
+  width: 100%;
 }
