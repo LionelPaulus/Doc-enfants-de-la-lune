@@ -16,6 +16,9 @@ switch (page) {
   case 'moon-test':
     new MoonTimeline('-90%');
   break;
+  case 'leo':
+  new MoonTimeline('-95%');
+  break;
   case 'suit':
     new MoonTimeline('-90%');
   break;
