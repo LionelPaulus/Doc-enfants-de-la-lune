@@ -4,15 +4,15 @@
 
 .page-focus {
   .focus-line {
-    animation: dash 2s ease-out 0s normal paused 1 forwards;
+    animation: dash 2s ease-out 0s normal running 1 forwards;
     stroke-dashoffset: 2000;
   }
   .focus-title {
-    animation: fadeIn .25s ease-in 2s normal paused 1 forwards;
+    animation: fadeIn .25s ease-in 2s normal running 1 forwards;
     opacity:0;
   }
   .focus-text {
-    animation: fadeIn .25s ease-in 2s normal paused 1 forwards;
+    animation: fadeIn .25s ease-out 2.25s normal running 1 forwards;
     opacity:0;
   }
   .floor0 {
@@ -22,7 +22,7 @@
     position: relative;
   }
   circle[cy="5.5"]{
-    animation: fadeIn 0s ease-in 1s normal paused 1 forwards;
+    animation: fadeIn 0s ease-in 1s normal running 1 forwards;
     opacity:0;
     }
 
@@ -183,7 +183,7 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(1em);
   }
 
   100% {
