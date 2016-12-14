@@ -165,7 +165,6 @@
   margin-top: 45px;
   position: relative;
   width: 70%;
-  z-index: 2;
 }
 
 .dermatologue__txt {
@@ -240,4 +239,77 @@
   width: 70%;
 }
 
-// @import 'components/moon-timeline';
+.overlay {
+  background-color: $true-black; // Black fallback
+  background-color: $overlay; // Black w/opacity
+  display: none;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.popup {
+  background-color: $white;
+  border-radius: 25px;
+  display: none;
+  left: 50%;
+  min-width: 700px;
+  padding: 35px;
+  padding-bottom: 20px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+
+  .popup__title {
+    color: $mauve;
+    font-family: $status-font-family;
+    font-size: 23px;
+    text-transform: uppercase;
+
+    &::before {
+      background: linear-gradient(to right, $white, $mauve);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: -150px;
+      margin-top: 10px;
+      position: absolute;
+      width: 118px;
+    }
+
+    &::after {
+      background: linear-gradient(to right, $mauve, $white);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: 30px;
+      margin-top: 10px;
+      position: absolute;
+      width: 118px;
+    }
+  }
+
+  .popup__content {
+    color: $true-black;
+    font-family: $content-font-family;
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 3vh;
+    margin-top: 3.5vh;
+  }
+
+  .popup__link {
+    color: $grey;
+    font-family: $title-font-family;
+    font-size: 12px;
+
+    img {
+      margin-top: 1vh;
+      width: 3vh;
+    }
+  }
+}
