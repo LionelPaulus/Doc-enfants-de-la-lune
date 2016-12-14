@@ -113,19 +113,22 @@
 
       <div class="page-legend">
         <p>
-          Léo est un petit garçon âgé de 8 ans faisant
-          chaque jour le bonheur de ses parents. 
-          Passionné de sport comme ses camarades,
-          son rêve est de devenir footballeur.
+          Léo est un petit garçon âgé de 8 ans faisant chaque jour le bonheur de ses parents. Passionné de sport comme ses camarades, son rêve est de devenir footballeur.
         </p>
       </div>
     </main>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
+  <script defer>
+    if (!window.jQuery) document.write(`<script defer src="dist/vendor/libs/jquery/dist/jquery.min.js"><\/script>`);
+  </script>
   <script src="https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.js" charset="utf-8"></script>
+  <script defer>
+    if (!window.jQuery.fn.roundSlider)
+      document.write(`<script defer src="dist/vendor/roundslider.min.js"><\/script>`);
+  </script>
   <script defer src="dist/js/bundle.js" charset="utf-8"></script>
-
 </body>
 
 </html>
