@@ -17,6 +17,7 @@ export class MoonTimeline {
       sliderType: 'default',
       value: 18,
       width: 10,
+      readOnly: true,
     });
   }
 }
