@@ -8,15 +8,15 @@
 }
 
 @mixin MoonPosition {
-  bottom: 0;
+  bottom: -15%;
   display: flex;
   height: $moon-size !important;
   justify-content: center;
   left: 0;
   margin: auto;
-  position: fixed;
+  position: absolute;
   right: 0;
-  transform: translateY(70%);
+  transform: translateY(-5%);
   width: $moon-size !important;
 }
 
@@ -28,17 +28,19 @@
     width: 100% !important;
   }
   .rs-bg-color {
-    background: transparent url('https://www.nasa.gov/sites/default/files/thumbnails/image/christmas2015fullmoon.jpg') center center no-repeat;
-    background-size: cover;
+
   }
   .rs-path {
     background: transparent !important;
   }
   .rs-block {
+    padding: 0!important;
     .rs-inner {
       height: $moon-globe-ratio;
       margin: 5% auto;
       width: $moon-globe-ratio;
+      background:white;
+      background-size: 100%;
     }
   }
 }
@@ -64,7 +66,7 @@
     0 0 0 5px rgba(255, 255, 255, 1),
     0 0 0 10px  rgba(255, 255, 255, .45),
     0 0 0 15px rgba(255, 255, 255, .65);
-    margin-left: -10px!important;
+    margin-left: -5px!important;
 
   }
 }

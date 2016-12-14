@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Enfants de la lune - EXPERIENCE</title>
-  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="dist/css/home.css">
 </head>
   <body>
-    <div class="home">
+    <section class="page home">
+      <div class="background-text"></div>
       <div class="home__grid">
         <div class="home__content">
           <div class="home__title">
@@ -17,12 +18,13 @@
             <img class="home__mask__img" src="src/media/img/mask.png"/>
           </div>
           <div class="home__btn">
-            <button class="home__btnTxt"> Commencer l'experience </button>
+            <button class="home__btnTxt">démarrer l'expérience</button>
           </div>
         </div>
       </div>
-    </div>
-    <div class="quickstart">
+    </section>
+    <section div class="quickstart">
+      <div class="background-text"></div>
       <div class="instructions">
         <h1 class="instructions__title">intéragissez d'une façon unique</h1>
         <div class="instructions__status detected">
@@ -32,19 +34,30 @@
           <div class="instructions__steps firststep">
             <img src="dist/media/img/iphone-face.svg" alt="iPhone de face">
             <h2>1. accédez à l'url</h2>
-            <p>Saisissez l'URL ci-dessous dans le navigateur de votre mobile.</p>
+            <p>Saisissez l'URL ci-dessous dans le<br>navigateur de votre mobile.</p>
             <p class="url">http://edll.tk</p>
           </div>
           <div class="instructions__steps secondstep">
             <img src="dist/media/img/iphone-back.svg" alt="iPhone de dos">
-            <h2>2. tenez votre téléphone face à votre écran</h2>
-            <p>Une fois votre téléphone connecté, tenez-le d'une main, l'écran face à l'écran d'ordinateur.</p>
+            <h2>2. tenez votre téléphone<br>face à votre écran</h2>
+            <p>Une fois votre téléphone connecté,<br>tenez-le d'une main, l'écran face à l'écran d'ordinateur.</p>
           </div>
         </div>
         <div class="home__btn">
           <button class="home__btnTxt">continuer</button>
         </div>
       </div>
-    </div>
+      <div class="overlay"></div>
+      <div class="popup">
+        <h1 class="popup__title">VOTRE SMARTPHONE N'EST PAS détecté</h1>
+        <h2 class="popup__subtitle">vous allez continuez l’experience<br>avec votre souris</h2>
+        <p class="popup__content">Votre souris prendra le rôle de votre<br>smartphone. Nous vous conseillons<br>vivement de continuez l’experience avec<br>votre smartphone</p>
+        <a class="popup__link">
+          continuer l'expérience avec la souris
+          <br><img src="dist/media/img/mouse.svg" alt="Souris">
+        </a>
+      </div>
+
+    </section>
   </body>
 </html>

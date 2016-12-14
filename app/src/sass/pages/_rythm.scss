@@ -1,0 +1,50 @@
+.page-title {
+  height: 120px;
+  padding-left: 10vw;
+  padding-top: 10vh;
+  h1 {
+    font-family: $status-font-family;
+    font-size: 1.3em;
+    font-weight: 400;
+    left: 2.25em;
+    position: relative;
+    text-transform: uppercase;
+    top: 1.75em;
+
+
+  }
+  &-illu {
+    height: 72.5px;
+    position: absolute;
+  }
+}
+
+.page-legend {
+  font-family: $content-font-family;
+  font-size: .9em;
+  font-weight: 200;
+  letter-spacing: 3px;
+  line-height: 1.05;
+  margin: auto;
+  margin-top: 10vh;
+  max-width: 550px;
+  position: relative;
+  text-align: center;
+  width: $moon-size;
+
+  &::before {
+    background: $mauve;
+    content: '';
+    height: 1px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -5vh;
+    width: 70px;
+  }
+}
+
+@import 'components/btn';
+@import 'components/moon-timeline';
+@import 'components/alarm';

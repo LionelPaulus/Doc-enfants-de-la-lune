@@ -1,0 +1,20 @@
+@mixin labelBackgroundPage {
+  .background-text {
+    color: $background-text;
+    font-family: $body-text-font-family;
+    font-size: 220px;
+    font-weight: bold;
+    line-height: 1;
+    margin-left: 10vw;
+    max-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    user-select: none;
+    width: 150px;
+    word-break: break-all;
+  }
+}
+
+
+@include labelBackgroundPage;

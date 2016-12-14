@@ -1,0 +1,315 @@
+.page-dermatologue {
+  .background-text {
+    background: url('../media/img/label_xero.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+.dermatologue__grid {
+  align-items: center;
+  margin: auto;
+  min-width: 775px;
+  position: relative;
+  width: 55%;
+}
+.page-title {
+
+  h1 {
+    font-family: $status-font-family;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+    top: 1em;
+
+
+  }
+  &-illu {
+    height: 72.5px;
+    left: -12px;
+    position: absolute;
+    top:2px;
+  }
+}
+
+.dermatologue__content {
+  margin-top: 15vh;
+}
+
+.dermatologue__txt__video {
+  margin-top: 30px;
+}
+
+.dermatologue__title__txt {
+  color: $white;
+  font-family: $status-font-family;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top:10px;
+  text-transform: uppercase;
+}
+
+.dermatologue__adn {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 7vw;
+  top: -180px;
+  transform: scale(.3) rotate(50deg);
+
+  .dna {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bar {
+    align-items: center;
+    animation: spin 5s infinite linear;
+    background: $white;
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    justify-content: space-between;
+    margin: 40px 0;
+    transform-style: preserve-3d;
+    width: 500px;
+
+    &::after, &::before {
+      animation: spin 5s infinite linear reverse;
+      background: $mauve;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 80px;
+      margin: -40px;
+      width: 80px;
+    }
+
+    &::after {
+      background: $dark-purple;
+    }
+
+    &:nth-child(1), &:nth-child(1)::after, &:nth-child(1)::before {
+      animation-delay: -0.357142857142857s;
+    }
+
+    &:nth-child(2), &:nth-child(2)::after, &:nth-child(2)::before {
+      animation-delay: -0.714285714285714s;
+    }
+
+    &:nth-child(3), &:nth-child(3)::after, &:nth-child(3)::before {
+      animation-delay: -1.071428571428571s;
+    }
+
+    &:nth-child(4), &:nth-child(4)::after, &:nth-child(4)::before {
+      animation-delay: -1.428571428571429s;
+    }
+
+    &:nth-child(5), &:nth-child(5)::after, &:nth-child(5)::before {
+      animation-delay: -1.785714285714286s;
+    }
+
+    &:nth-child(6), &:nth-child(6)::after, &:nth-child(6)::before {
+      animation-delay: -2.142857142857143s;
+    }
+
+    &:nth-child(7), &:nth-child(7)::after, &:nth-child(7)::before {
+      animation-delay: -2.5s;
+    }
+
+    &:nth-child(8), &:nth-child(8)::after, &:nth-child(8)::before {
+      animation-delay: -2.857142857142857s;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotateY(0deg) translateZ(40px);
+    }
+    25% {
+      transform: rotateY(90deg) translateZ(40px);
+    }
+    50% {
+      transform: rotateY(180deg) translateZ(40px);
+    }
+    75% {
+      transform: rotateY(270deg) translateZ(40px);
+    }
+    100% {
+      transform: rotateY(360deg) translateZ(40px);
+    }
+  }
+}
+
+.filter__video {
+  background: $mauve;
+  height: 99%;
+  opacity: .4;
+  position: absolute;
+  width: 100%;
+}
+
+.video__dermatologue {
+  height: 220px;
+}
+
+.video__infos {
+  margin-left: 40px;
+  padding-top: 15px;
+}
+
+.dermatologue__description {
+  margin-top: 45px;
+  position: relative;
+  width: 70%;
+}
+
+.dermatologue__txt {
+  color: $white;
+  font-family: $content-font-family;
+  font-size: 15px;
+  font-weight: $fix-futura-book-weight;
+  letter-spacing: 1px;
+  line-height: 18px;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.step__dermatologue {
+  color: $white;
+  margin-top: 15vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.step {
+  display: inline-block;
+  vertical-align: top;
+  width: 219px;
+}
+
+.light {
+  opacity: 1;
+}
+
+.dark {
+  opacity: .1;
+}
+
+.step__title {
+  color: $white;
+  font-family: $content-font-family;
+  font-size: 21px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.small-divider {
+  background: $mauve;
+  height: 1px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 20%;
+}
+
+.big-divider {
+  background: $mauve;
+  height: 5px;
+  margin: auto;
+  margin-top: 20px;
+  width:85%;
+}
+
+
+.step-description {
+  font-family: $content-font-family;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 16px;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}
+
+.overlay {
+  background-color: $true-black; // Black fallback
+  background-color: $overlay; // Black w/opacity
+  display: none;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.popup {
+  background-color: $white;
+  border-radius: 25px;
+  display: none;
+  left: 50%;
+  min-width: 700px;
+  padding: 35px;
+  padding-bottom: 20px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+
+  .popup__title {
+    color: $mauve;
+    font-family: $status-font-family;
+    font-size: 23px;
+    text-transform: uppercase;
+
+    &::before {
+      background: linear-gradient(to right, $white, $mauve);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: -150px;
+      margin-top: 10px;
+      position: absolute;
+      width: 118px;
+    }
+
+    &::after {
+      background: linear-gradient(to right, $mauve, $white);
+      border-radius: 25px;
+      content: '';
+      height: 2px;
+      margin-left: 30px;
+      margin-top: 10px;
+      position: absolute;
+      width: 118px;
+    }
+  }
+
+  .popup__content {
+    color: $true-black;
+    font-family: $content-font-family;
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 3vh;
+    margin-top: 3.5vh;
+  }
+
+  .popup__link {
+    color: $grey;
+    font-family: $title-font-family;
+    font-size: 12px;
+
+    img {
+      margin-top: 1vh;
+      width: 3vh;
+    }
+  }
+}

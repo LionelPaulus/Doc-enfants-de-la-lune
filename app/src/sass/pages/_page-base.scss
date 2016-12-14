@@ -1,0 +1,28 @@
+body {
+  overflow: hidden;
+}
+
+.page {
+  background: $page-gradient;
+  background-size: 100% 100%;
+  color: $white;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.page-content {
+  margin: auto;
+  width: 60%;
+}
+
+.background-text {
+  height: 100%;
+  left: 0;
+  margin-left: 10vw;
+  position: absolute;
+  width: 15vw;
+}
+
+@import 'components/page-commands';
+@import 'components/label-background-page';

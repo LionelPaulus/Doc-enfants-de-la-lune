@@ -1,0 +1,53 @@
+@mixin Alarm {
+  .alarm {
+    font-family: $content-font-family;
+    margin: 2em auto;
+    text-align: center;
+    width: 275px;
+
+    &__container {
+      border: 3px solid $mauve;
+      border-radius: 8px;
+    }
+    &__time {
+      font-size: 3em;
+      font-weight: $fix-futura-book-weight;
+      letter-spacing: 5px;
+      line-height: .5;
+      padding-top: .75em;
+    }
+    &__day {
+      font-size: .875em;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding-bottom: 1em;
+
+    }
+    &__clock {
+      align-items: center;
+      border-top: 3px solid $mauve;
+      display: flex;
+      justify-content: center;
+      img {
+        padding: .5em;
+        width: 1.5em;
+
+      }
+    }
+
+    &__stop {
+      @include stopBtn;
+    }
+  }
+}
+
+
+@mixin stopBtn {
+  @include btn;
+  margin-top: 7.5vh;
+
+};
+
+
+
+@include Alarm;
