@@ -4,3 +4,35 @@
 .disabled {
   display: none;
 }
+
+.alarm-clock {
+  border: 3px solid $mauve;
+  border-radius: 8px;
+  height: 80px;
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
+  width: 72px;
+
+  .icon {
+    background-image: url('../media/img/clock_icon.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 1.5px solid $mauve;
+    height: 50px;
+    width: 100%;
+  }
+
+  .time {
+    align-items: center;
+    display: flex;
+    height: calc(80px - 50px);
+    justify-content: center;
+
+    span {
+      color: $white;
+      font-family: $content-font-family;
+      font-size: 13px;
+    }
+  }
+}
