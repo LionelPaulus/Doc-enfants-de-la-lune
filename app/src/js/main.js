@@ -66,6 +66,12 @@ $('.next').on('click', function() {
     $('.page-' + pages[i]).addClass('disabled');
     ++i;
     $('.page-' + pages[i]).addClass('active');
+
+    if(i == 1){
+      $('.previous').fadeIn();
+    }else if(i == (allSections.length - 1)){
+      $('.next').fadeOut();
+    }
   }
 });
 $('.previous').on('click', function() {
@@ -76,6 +82,12 @@ $('.previous').on('click', function() {
     $('.page-' + pages[i]).addClass('disabled');
     --i;
     $('.page-' + pages[i]).addClass('active');
+
+    if(i == (allSections.length - 2)){
+      $('.next').fadeIn();
+    }else if(i == 0){
+      $('.previous').fadeOut();
+    }
   }
 });
 /*if (i = 6 ){

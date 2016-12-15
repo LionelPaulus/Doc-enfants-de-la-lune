@@ -6,6 +6,7 @@
       transform: translateY(-50%);
     }
     & > .previous {
+      display: none;
       user-select: none;
       @include page-commands-previous;
     }
