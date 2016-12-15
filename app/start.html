@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="dist/css/app.css">
 </head>
   <body>
+    <aside class="page-commands">
+      <div class="previous">
+        <span class="bar"></span>
+        <a href="#"  id="buttonPrev" class="label prev">Précédent</a>
+      </div>
+      <div class="next">
+        <a href="#" id="buttonNext" class="label next">Suivant</a>
+        <span class="bar"></span>
+      </div>
+    </aside>
     <section class="page page-leo">
       <div class="background-text">
         LEO
       </div>
-      <aside class="page-commands">
-        <div class="previous">
-          <span class="bar"></span>
-          <a href="#" class="label prev">Précédent</a>
-        </div>
-        <div class="next">
-          <a href="#" id="buttonNext" class="label next">Suivant</a>
-          <span class="bar"></span>
-        </div>
-      </aside>
       <main class="page-content">
         <div class="page-focus">
           <div class="floor1">
@@ -119,41 +119,7 @@
       </main>
     </section>
 
-    <section class="page page-journee">
-      <div class="background-text">
 
-      </div>
-
-      <main class="page-content">
-        <div class="clear"></div>
-        <div class="day light">
-          <div class="text__day">
-            <h1 class="text__day__title">L’école</h1>
-            <div class="divider-day"></div>
-            <p>
-              Sans des vitres spéciales, le petit Léo ne pourrait pas venir à l’école. Celles-ci servent à le protéger des émissions UV et à maintenir le quotidien que tout enfant est en droit de recevoir. Les locaux de l’école doivent être adaptés à la maladie de
-              Léo pour qu’il y soit scolarisé.
-            </p>
-          </div>
-          <div class="video_step">
-            <video autoplay loop src="src/media/video/STAGE_5_PART_2.mp4"></video>
-          </div>
-        </div>
-        <div class="clear"></div>
-        <div class="day dark">
-          <div class="video_step">
-            <video autoplay loop src="src/media/video/STAGE_5_PART_3.mp4"></video>
-          </div>
-          <div class="text__day">
-            <h1 class="text__day__title">Les locaux</h1>
-            <div class="divider-day"></div>
-            <p>
-              Ce sont les propriétaires des locaux qui financent les installations Puisque le petit Léo est reconnu handicapé à hauteur de 80%, c’est donc le Conseil Régional qui gère les dépenses.
-            </p>
-          </div>
-        </div>
-      </main>
-    </section>
 
     <section class="page page-suit">
       <div class="background-text">
@@ -271,6 +237,8 @@
       </main>
     </section>
 
+
+
     <section class="page page-dermatologue">
       <div class="background-text"></div>
 
@@ -351,6 +319,78 @@
       </div>
     </section>
 
+    <section class="page page-howToTreat">
+      <div class="howToTreat__grid">
+        <div class="howToTreat__content">
+          <div class="howToTreat__txt__video">
+            <div class="howToTreat__video__container">
+              <div class="filter__video"></div>
+               <video autoplay loop class="video__howToTreat" src="src/media/video/STAGE_6.mp4"></video>
+            </div>
+            <div class="video__infos">
+              <header class="page-title">
+                <img src="dist/media/img/quarter-moon.svg" alt="quarter moon" class="page-title-illu">
+                <h1>COMMENT LE SOIGNER</h1>
+              </header>
+              <div class="howToTreat__description">
+                <p class="howToTreat__txt">
+                  Il n’existe actuellement aucun traitement curatif. Le plus efficace est la réduction maximale de l’exposition à la lumière du jour ou de certaines lumières artificielles, ce qui induit un mode de vie très astreignant mais indispensable pour ralentir l’évolution de la maladie.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="don">
+        <h1>Soutenez les enfants de la lune </h1>
+        <p>
+          Faites un don afin de soutenir les familles
+          des malades et la recherche, pour sortir les
+          enfants de leur isolement et développer le masque
+        </p>
+        <div class="home__btn">
+          <a class="home__btnTxt" href="https://www.helloasso.com/don/associations/enfants-de-la-lune">Faire un don</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="page page-journee">
+      <div class="background-text">
+
+      </div>
+
+      <main class="page-content">
+        <div class="clear"></div>
+        <div class="day light">
+          <div class="text__day">
+            <h1 class="text__day__title">L’école</h1>
+            <div class="divider-day"></div>
+            <p>
+              Sans des vitres spéciales, le petit Léo ne pourrait pas venir à l’école. Celles-ci servent à le protéger des émissions UV et à maintenir le quotidien que tout enfant est en droit de recevoir. Les locaux de l’école doivent être adaptés à la maladie de
+              Léo pour qu’il y soit scolarisé.
+            </p>
+          </div>
+          <div class="video_step">
+            <video autoplay loop src="src/media/video/STAGE_5_PART_2.mp4"></video>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="day dark">
+          <div class="video_step">
+            <video autoplay loop src="src/media/video/STAGE_5_PART_3.mp4"></video>
+          </div>
+          <div class="text__day">
+            <h1 class="text__day__title">Les locaux</h1>
+            <div class="divider-day"></div>
+            <p>
+              Ce sont les propriétaires des locaux qui financent les installations Puisque le petit Léo est reconnu handicapé à hauteur de 80%, c’est donc le Conseil Régional qui gère les dépenses.
+            </p>
+          </div>
+        </div>
+      </main>
+    </section>
+
     <section class="page page-consequences">
       <div class="flex center">
         <div class="consequences">
@@ -387,12 +427,21 @@
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
     <script>
-    var pages  = ['leo','journee','suit','dermatologue'];
-
+    var allSections = $('section.page');
+    allSections.css('display','none');
+    allSections.eq(0).css('display','block');
+    var pages  = ['leo','suit','dermatologue','howToTreat','journee','consequences'];
+    i = 0;
     $('#buttonNext').on('click', function() {
-        $('.page-'. pages[i]).remove();
-        console.log(pages);
-        $('.page-' .pages[i++]).show();
+        $('.page-' + pages[i]).remove();
+        console.log(pages[i]);
+        $('.page-' + pages[i++]).show();
+    });
+
+    $('#buttonPrev').on('click', function() {
+        $('.page-' + pages[i]).remove();
+        console.log(pages[i]);
+        $('.page-' + pages[i--]).show();
     });
     </script>
     <script defer>
