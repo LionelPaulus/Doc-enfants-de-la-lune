@@ -429,12 +429,35 @@
 
     </section>
 
+    <section class="page page-lune">
+      <div class="lune__grid">
+        <div class="lune_title">
+          <h1>Soutenez les enfants de la lune </h1>
+        </div>
+        <div class="lune-big">
+          <img src="dist/media/img/lune-big.png" alt="moon" class="big__moon">
+        </div>
+        <div class="merci">
+          <p>
+            Nous remercions l’association
+            les enfants de la lune pour les
+            témoignages des enfants atteints
+            par cette maladie.
+          </p>
+          <div class="home__btn">
+            <a class="home__btnTxt" target="_blank" href="http://www.enfantsdelalune.org/">voir le site de l’association</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
     <script>
     var allSections = $('section.page');
     allSections.not(":eq(0)").addClass('disabled');
     allSections.eq(0).addClass('active');
-    var pages  = ['leo','journee','suit','dermatologue','consequences','howToTreat'];
+    var pages  = ['leo','journee','suit','dermatologue','consequences','howToTreat','lune'];
     i = 0;
     $('#buttonNext').on('click', function() {
       if( i >= allSections.length ) {
