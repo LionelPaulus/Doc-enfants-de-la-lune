@@ -1,0 +1,25 @@
+@mixin TorchCursor {
+  html {
+    cursor: none;
+  }
+  a {
+    cursor: none;
+  }
+
+  .torch {
+    border: 3px solid $mauve;
+    border-radius: 50%;
+    height: $cursor-size;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: $cursor-size;
+    z-index: 1;
+
+  }
+}
+
+
+
+
+@include TorchCursor;
