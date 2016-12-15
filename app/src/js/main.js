@@ -27,7 +27,7 @@ case 'leo':
   break;
 case 'suit':
 
-  new MoonTimeline('-90%');
+  new MoonTimeline('-100%');
   new Reveal('lines', ø.all('svg circle.trigger'));
   break;
 case 'rythm':
