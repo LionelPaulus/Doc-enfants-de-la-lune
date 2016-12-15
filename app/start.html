@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="dist/css/moon.css">
 </head>
   <body>
-    <section class="page page-suit">
+    <section class="page page-leo">
       <div class="background-text">
         LEO
       </div>
@@ -393,9 +393,12 @@
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
     <script>
+    var pages  = ['leo','journee','suit','dermatologue'];
+
     $('#buttonNext').on('click', function() {
-        $('.page-leo').remove();
-        $('.page-suit').show();
+        $('.page-'. pages[i]).remove();
+        console.log(pages);
+        $('.page-' .pages[i++]).show();
     });
     </script>
     <script defer>
