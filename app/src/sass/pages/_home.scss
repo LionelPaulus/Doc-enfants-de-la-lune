@@ -1,3 +1,15 @@
+body {
+  overflow: inherit;
+}
+
+html {
+  cursor: inherit;
+}
+
+.page {
+  overflow: inherit;
+}
+
 .home {
   background: $black;
   height: 100vh;

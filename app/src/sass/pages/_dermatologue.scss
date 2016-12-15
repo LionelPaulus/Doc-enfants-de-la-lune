@@ -242,7 +242,7 @@
 .overlay {
   background-color: $true-black; // Black fallback
   background-color: $overlay; // Black w/opacity
-  display: none;
+  // display: none;
   height: 100%;
   overflow-x: hidden;
   position: fixed;
@@ -253,9 +253,9 @@
 .popup {
   background-color: $white;
   border-radius: 25px;
-  display: none;
+  // display: none;
   left: 50%;
-  min-width: 700px;
+  min-width: 600px;
   padding: 35px;
   padding-bottom: 20px;
   position: fixed;
@@ -268,6 +268,7 @@
     color: $mauve;
     font-family: $status-font-family;
     font-size: 23px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 
     &::before {
@@ -297,7 +298,7 @@
     color: $true-black;
     font-family: $content-font-family;
     font-size: 17px;
-    line-height: 17px;
+    line-height: 18px;
     margin-bottom: 3vh;
     margin-top: 3.5vh;
   }
@@ -308,8 +309,8 @@
     font-size: 12px;
 
     img {
-      margin-top: 1vh;
-      width: 3vh;
+      margin-top: 1.5vh;
+      width: 4vh;
     }
   }
 }
