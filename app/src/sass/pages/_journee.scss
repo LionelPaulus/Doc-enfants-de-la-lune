@@ -1,67 +1,44 @@
 .page-journee {
-  .page-title {
-    height: 70px;
-    margin-top: 30px;
-    position: relative;
-    & h1 {
-      font-family: $status-font-family;
-      font-size: 1.5em;
-      font-weight: 400;
-      left: 1.9em;
-      letter-spacing: 1px;
-      position: relative;
-      text-transform: uppercase;
-      top: 6vh;
-    }
-    &-illu {
-      height: 72.5px;
-      left: 0;
-      position: absolute;
-    }
-  }
+
   .day {
     display: flex;
     height: auto;
     margin: auto;
-    margin-top: 30px;
-    max-width: 943px;
+    margin-top: 80px;
     position: relative;
     width: 100%;
     > div {
       width: 40%;
       video {
-        height: 160px;
         max-width: 100%;
       }
     }
-
-
-    &:nth-child(even) {
+    &:nth-child(odd) {
       > div:nth-child(1) {
-        padding-right: 55px;
+        padding-right: 35px;
       }
 
       > div:nth-child(2) {
-        padding-left: 55px;
+        padding-left: 35px;
       }
-    };
+    }
 
     &:nth-child(odd) {
       > div:nth-child(1) {
-        padding-left: 55px;
+        padding-left: 35px;
       }
 
       > div:nth-child(2) {
-        padding-right: 55px;
+        padding-right: 35px;
       }
-    };
+    }
   }
-
+}
 
   p {
     color: $white;
     font-family: $content-font-family;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: $fix-futura-book-weight;
     letter-spacing: 1px;
     line-height: 15px;
@@ -69,10 +46,9 @@
     text-align: justify;
   }
 
-  .absolute-overlay{
+  .absolute-overlay {
     position: absolute;
     width: 40%;
-    height: 173px;
     background: $mauve;
     opacity: .4;
   }
@@ -84,8 +60,6 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-
-
 
   .divider-day {
     background: $mauve;
@@ -102,4 +76,10 @@
   .dark {
     opacity: .4;
   }
-}
+
+  .day:last-child {
+    margin-top: 30px;
+  }
+  .active-border {
+    border-right: 5px solid $mauve;
+  }
