@@ -1,16 +1,36 @@
 .page-journee {
+  .page-title {
+    height: 70px;
+    margin-top: 30px;
+    position: relative;
+    & h1 {
+      font-family: $status-font-family;
+      font-size: 1.5em;
+      font-weight: 400;
+      left: 1.9em;
+      letter-spacing: 1px;
+      position: relative;
+      text-transform: uppercase;
+      top: 6vh;
+    }
+    &-illu {
+      height: 72.5px;
+      left: 0;
+      position: absolute;
+    }
+  }
   .day {
     display: flex;
     height: auto;
     margin: auto;
-    margin-top: 45px;
+    margin-top: 30px;
     max-width: 943px;
     position: relative;
     width: 100%;
     > div {
-      height: 200px;
       width: 40%;
       video {
+        height: 160px;
         max-width: 100%;
       }
     }
@@ -41,11 +61,11 @@
   p {
     color: $white;
     font-family: $content-font-family;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: $fix-futura-book-weight;
     letter-spacing: 1px;
-    line-height: 18px;
-    padding-top: 20px;
+    line-height: 15px;
+    padding-top: 10px;
     text-align: justify;
   }
 
@@ -60,9 +80,8 @@
   .text__day__title {
     color: $white;
     font-family: $status-font-family;
-    font-size: 21px;
+    font-size: 18px;
     letter-spacing: 2px;
-    margin-top: 10px;
     text-transform: uppercase;
   }
 
