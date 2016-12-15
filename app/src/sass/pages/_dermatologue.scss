@@ -4,14 +4,17 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
   }
+}
 
-  .dermatologue__grid {
-    align-items: center;
-    margin: auto;
-    min-width: 775px;
-    position: relative;
-    width: 55%;
-  }
+.dermatologue__grid {
+  align-items: center;
+  margin: auto;
+  min-width: 775px;
+  position: relative;
+  width: 55%;
+}
+
+.page-title {
   .page-title {
 
     h1 {
@@ -22,6 +25,40 @@
       position: relative;
       text-transform: uppercase;
       top: 1em;
+  &-illu {
+    height: 72.5px;
+    left: -12px;
+    position: absolute;
+    top: 2px;
+  }
+}
+
+.dermatologue__content {
+  margin-top: 15vh;
+}
+
+.dermatologue__txt__video {
+  margin-top: 30px;
+}
+
+.dermatologue__title__txt {
+  color: $white;
+  font-family: $status-font-family;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.dermatologue__adn {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 7vw;
+  top: -180px;
+  transform: scale(.3) rotate(50deg);
+>>>>>>> interactions
 
 
     }
@@ -159,6 +196,21 @@
     margin-left: 40px;
     padding-top: 15px;
   }
+.dermatologue__txt {
+  animation: fadeIn .25s ease-out .5s normal paused 1 forwards;
+  color: $white;
+  font-family: $content-font-family;
+  font-size: 15px;
+  font-weight: $fix-futura-book-weight;
+  letter-spacing: 1px;
+  line-height: 18px;
+  opacity: 0;
+  padding-top: 30px;
+  text-align: left;
+  &.reveal {
+    animation-play-state: running;
+  }
+}
 
   .dermatologue__description {
     margin-top: 45px;
@@ -185,11 +237,38 @@
     text-align: center;
   }
 
-  .step {
-    display: inline-block;
-    vertical-align: top;
-    width: 219px;
+.step {
+  display: inline-block;
+  opacity: .1;
+  position: relative;
+  transition: opacity .15s;
+  vertical-align: top;
+  width: 219px;
+  &.reveal {
+    opacity: 1;
   }
+}
+$target-size: 20px;
+
+.step__triggers {
+  box-sizing: border-box;
+  display: flex;
+  justify-content:  space-around;
+  margin: 3vh auto;
+  min-width: 775px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 60%;
+}
+
+.step__triggers .target.trigger {
+  background:yellow;
+  border-radius: 50%;
+  height: $target-size;
+  position: relative;
+  width: $target-size;
+  z-index: 1;
+}
 
   .light {
     opacity: 1;
@@ -312,5 +391,18 @@
         width: 4vh;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+
   }
 }

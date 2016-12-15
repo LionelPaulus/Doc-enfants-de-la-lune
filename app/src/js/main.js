@@ -11,7 +11,7 @@ const ø = window.ø;
 
 const page = location.pathname.replace('.html', '').replace('/', '');
 
-new Torch();
+const torch = new Torch();
 
 switch (page) {
 case 'moon-test':
@@ -22,13 +22,22 @@ case 'moon-test':
 case 'leo':
 
   new MoonTimeline('-95%');
-  new Reveal('lines', ø.all('svg circle.trigger'), true);
+  new Reveal('lines', ø.all('svg circle.trigger'));
+  torch.launchCamera();
+
+  break;
+case 'dermatologue':
+
+  new MoonTimeline('-95%');
+  new Reveal('tabs', ø.all('.target.trigger'));
+  torch.launchCamera();
 
   break;
 case 'suit':
 
   new MoonTimeline('-100%');
   new Reveal('lines', ø.all('svg circle.trigger'));
+  torch.launchCamera();
   break;
 case 'rythm':
 case 'sport':
