@@ -134,6 +134,7 @@ export class Torch {
             target.lighted = true;
             if (!target.parentLinked.parentNode.querySelector('.step:not(.lighted)')) {
               window.reveal.tabs.finish();
+              this.trackerTask.stop(); // Stops the tracking
             }
           }
         }
