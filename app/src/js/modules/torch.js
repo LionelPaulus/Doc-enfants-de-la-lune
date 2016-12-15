@@ -18,11 +18,11 @@ export class Torch {
     const point = document.createElement('div');
     point.className = 'torch';
     document.body.appendChild(point);
+    const halfWidth = point.clientWidth / 2;
 
 
     window.addEventListener('mousemove', (e) => {
       // CALCULATE NEW POS OF FAKE CURSOR
-      const halfWidth = point.clientWidth / 2;
       const pos = {
         y: (e.pageY - halfWidth - (halfWidth / 2)),
         x: (e.pageX - halfWidth - (halfWidth / 2)),
@@ -31,6 +31,11 @@ export class Torch {
       // UPDATE CURSOR POS
       point.style.top = `${pos.y}px`;
       point.style.left = `${pos.x}px`;
+
+      // console.log(e.target.tagName.svg);
+      // if (e.target.tagName === 'svg' && !e.target.classList.contains('reveal')) {
+      //   e.target.parentNode.classList.add('reveal');
+      // }
     });
 
     // RETURN DOM NODE

@@ -3,8 +3,8 @@ import { DomManipulator } from './models/class.dom-manipulator';
 import { MoonTimeline } from './modules/moon-timeline';
 import { RythmAlarm } from './modules/rythm-alarm';
 import { Torch } from './modules/torch';
+import { Reveal } from './modules/reveal';
 // import { scrollDetect } from './scroll-detect';
-
 
 window.ø = new DomManipulator();
 const ø = window.ø;
@@ -12,22 +12,29 @@ const ø = window.ø;
 const demoFlashlight = document.getElementsByClassName('demo-flashlight')[0];
 const page = location.pathname.replace('.html', '').replace('/', '');
 
+new Torch();
 
 switch (page) {
-  case 'moon-test':
-    new MoonTimeline('-90%');
+case 'moon-test':
+
+  new MoonTimeline('-90%');
+
   break;
-  case 'leo':
-    new MoonTimeline('-95%');
+case 'leo':
+
+  new MoonTimeline('-95%');
+
   break;
-  case 'suit':
-    new MoonTimeline('-90%');
-    new Torch();
+case 'suit':
+
+  new MoonTimeline('-90%');
+  new Reveal('lines', ø.all('svg circle.trigger'));
   break;
-  case 'rythm':
-  case 'sport':
-    new MoonTimeline('-12.5%');
-    //new RythmAlarm(ø.id('alarm'));
+case 'rythm':
+case 'sport':
+
+  new MoonTimeline('-12.5%');
+
   break;
 
 }
@@ -37,7 +44,7 @@ switch (page) {
   if (demoFlashlight) {
     const torch = demoFlashlight.querySelector('img');
     const debugDetection = true;
-    if (window.penis === true && hasGetUserMedia()) {
+    if (hasGetUserMedia()) {
 
 
 

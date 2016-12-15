@@ -15,7 +15,11 @@
     top: 0;
     width: $cursor-size;
     z-index: 1;
+
   }
 }
+
+
+
 
 @include TorchCursor;

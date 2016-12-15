@@ -4,16 +4,16 @@
 
 .page-focus {
   .focus-line {
-    animation: dash 2s ease-out 0s normal running 1 forwards;
+    animation: dash 2s ease-out 0s normal paused 1 forwards;
     stroke-dashoffset: 2000;
   }
   .focus-title {
-    animation: fadeIn .25s ease-in 2s normal running 1 forwards;
-    opacity:0;
+    animation: fadeIn .25s ease-in 2s normal paused 1 forwards;
+    opacity: 0;
   }
   .focus-text {
-    animation: fadeIn .25s ease-out 2.25s normal running 1 forwards;
-    opacity:0;
+    animation: fadeIn .25s ease-out 2.25s normal paused 1 forwards;
+    opacity: 0;
   }
   .floor0 {
     align-items: center;
@@ -21,11 +21,18 @@
     display: flex;
     position: relative;
   }
-  circle[cy="5.5"]{
-    animation: fadeIn 0s ease-in 1s normal running 1 forwards;
-    opacity:0;
-    }
 
+  circle[cy='5.5']{
+    animation: fadeIn 0s ease-in 1s normal paused 1 forwards;
+    opacity: 0;
+
+  }
+
+  circle.trigger {
+    filter: drop-shadow(55px 55px 55px red);
+    position: relative;
+    z-index: 10;
+  }
 
 
 
@@ -46,7 +53,9 @@
       }
       .focus-title {
         animation-play-state: running;
-
+      }
+      .focus-text {
+        animation-play-state: running;
       }
     }
 
@@ -143,6 +152,7 @@
     margin: auto;
     position: relative;
     width: 80%;
+    z-index: 1;
     .page-illu img {
       height: 100%;
     }
