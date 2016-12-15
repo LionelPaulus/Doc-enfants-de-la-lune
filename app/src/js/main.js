@@ -30,7 +30,7 @@ case 'dermatologue':
 
   new MoonTimeline('-95%');
   new Reveal('tabs', ø.all('.target.trigger'));
-  // torch.launchCamera();
+  torch.launchCamera();
 
   break;
 case 'suit':

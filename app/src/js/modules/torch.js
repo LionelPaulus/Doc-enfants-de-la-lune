@@ -78,9 +78,7 @@ export class Torch {
 
       return elem;
     });
-
-    this.test = window.targets[0];
-
+    this.page = ø.el('.page').classList[1].replace('page-', '');
     const tracking = window.tracking;
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
@@ -117,12 +115,26 @@ export class Torch {
 
 
 
-        if (fakeRatio.x < 20 && fakeRatio.y < 20
-        && target.parent.classList.contains('reveal') === false) {
-          target.parentNode.parentNode.parentNode.classList.add('reveal');
+        if (fakeRatio.x < 40 && fakeRatio.y < 40) {
+          // SUIT && LEO
+          if ((this.page === 'suit' || this.page === 'leo') && target.parent.classList.contains('reveal') === false) {
+            target.parent.classList.add('reveal');
 
-          if (!target.parent.parentNode.parentNode.querySelector('.focus:not(.reveal):not(.page-illu)')) {
-            window.reveal.lines.finish();
+            if (!target.parent.parentNode.parentNode.querySelector('.focus:not(.reveal):not(.page-illu)')) {
+              window.reveal.lines.finish();
+            }
+          }
+          // SUIT && LEO
+          if ((this.page === 'dermatologue') && target.parentLinked.classList.contains('reveal') === false) {
+            const previousActive = ø.el('.step.reveal');
+            if (previousActive) previousActive.classList.remove('reveal');
+
+            target.parentLinked.classList.add('reveal');
+            target.parentLinked.classList.add('lighted');
+            target.lighted = true;
+            if (!target.parentLinked.parentNode.querySelector('.step:not(.lighted)')) {
+              window.reveal.tabs.finish();
+            }
           }
         }
       }

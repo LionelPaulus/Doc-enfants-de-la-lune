@@ -12,7 +12,7 @@ export class Reveal {
       this.lines = new RevealLines(targets, debug);
       break;
     case 'tabs':
-      this.lines = new RevealTabs(targets, debug);
+      this.tabs = new RevealTabs(targets, debug);
       break;
     default:
       return null;

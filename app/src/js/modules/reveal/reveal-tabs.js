@@ -14,6 +14,7 @@ export class RevealTabs {
       const index = target.getAttribute('data-index');
       const parent = target.parentNode.parentNode.children[1].children[index];
       target.lighted = false;
+      target.parentLinked = parent;
 
       target.addEventListener('mouseenter', () => {
         if (parent.classList.contains('reveal') === false) {
