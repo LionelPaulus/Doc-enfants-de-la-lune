@@ -87,11 +87,14 @@
   }
 
   .don {
+    bottom: 25vh;
     color: $white;
     left: 0;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
+    position: absolute;
+    right: 0;
 
     h1 {
       font-family: $title-font-family;
