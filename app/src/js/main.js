@@ -48,6 +48,43 @@ case 'sport':
 
 }
 
+// START.HTML JS
+
+var allSections = $('section.page');
+allSections.not(":eq(0)").addClass('disabled');
+allSections.eq(0).addClass('active');
+var pages  = ['leo','journee','suit','dermatologue','consequences','howToTreat','lune'];
+var i = 0;
+$('.next').on('click', function() {
+  if(i >= allSections.length - 1){
+    return false;
+  } else {
+    allSections.removeClass('active');
+    $('.page-' + pages[i]).addClass('disabled');
+    ++i;
+    $('.page-' + pages[i]).addClass('active');
+  }
+});
+$('.previous').on('click', function() {
+  if(i <= 0) {
+    return false;
+  } else {
+    allSections.removeClass('active');
+    $('.page-' + pages[i]).addClass('disabled');
+    --i;
+    $('.page-' + pages[i]).addClass('active');
+  }
+});
+/*if (i = 6 ){
+  $(".big__moon")
+    .css('opacity', 0)
+    .slideUp('slow')
+    .animate(
+      { opacity: 1 },
+      { queue: false, duration: 'slow' }
+  );
+}*/
+
     // demoFlashlight.onmousemove = (e) => {
     //   torch.style.transform = `translate(${(e.pageX - 250)}px ,${e.pageY - 500}px)`;
     //   [].forEach.call(demoFlashlight.querySelectorAll('p'), (elem) => {

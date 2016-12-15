@@ -453,10 +453,10 @@
     <aside class="page-commands">
       <div class="previous">
         <span class="bar"></span>
-        <a href="#"  id="buttonPrev" class="label prev">Précédent</a>
+        <a href="#"  id="buttonPrev" class="label">Précédent</a>
       </div>
       <div class="next">
-        <a href="#" id="buttonNext" class="label next">Suivant</a>
+        <a href="#" id="buttonNext" class="label">Suivant</a>
         <span class="bar"></span>
       </div>
     </aside>
@@ -468,42 +468,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
-    <script>
-    var allSections = $('section.page');
-    allSections.not(":eq(0)").addClass('disabled');
-    allSections.eq(0).addClass('active');
-    var pages  = ['leo','journee','suit','dermatologue','consequences','howToTreat','lune'];
-    i = 0;
-    $('#buttonNext').on('click', function() {
-      if( i >= allSections.length ) {
-        return false;
-      }
-      else {
-        allSections.removeClass('active');
-        $('.page-' + pages[i]).addClass('disabled');
-        $('.page-' + pages[i++]).addClass('active');
-      }
-    });
-    $('#buttonPrev').on('click', function() {
-      if( i <= 0 ) {
-        return false;
-      }
-      else {
-        allSections.removeClass('active');
-        $('.page-' + pages[i--]).addClass('disabled');
-        $('.page-' + pages[i]).addClass('active');
-      }
-    });
-    /*if (i = 6 ){
-      $(".big__moon")
-        .css('opacity', 0)
-        .slideUp('slow')
-        .animate(
-          { opacity: 1 },
-          { queue: false, duration: 'slow' }
-      );
-    }*/
-    </script>
     <script defer>
       if (!window.jQuery) document.write(`<script defer src="dist/vendor/libs/jquery/dist/jquery.min.js"><\/script>`);
     </script>
