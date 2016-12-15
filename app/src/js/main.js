@@ -13,7 +13,6 @@ const page = location.pathname.replace('.html', '').replace('/', '');
 const torch = new Torch();
 const moon = new MoonTimeline('-95%');
 const reveal = new Reveal('lines', ø.all('.page-leo svg circle.trigger'));
-console.log(reveal);
 //torch.launchCamera();
 
 switch (page) {
