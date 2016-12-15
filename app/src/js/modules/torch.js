@@ -1,16 +1,15 @@
 export class Torch {
   constructor() {
-    console.log(this);
     window.torch = this;
     this.userMedia = this.hasGetUserMedia();
     this.cursor = this.renderCursor();
-    //this.launchCamera();
+    // this.launchCamera();
     const body = document.body;
     const html = document.documentElement;
 
     this.pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     this.pageWidth = Math.max(body.scrollLeft, body.offsetWidth, html.clientWidth, html.scrollLeft, html.offsetWidth);
-  //v ar totalWindow = height + width;
+  // var totalWindow = height + width;
   }
   // detect webcam
   hasGetUserMedia() {
