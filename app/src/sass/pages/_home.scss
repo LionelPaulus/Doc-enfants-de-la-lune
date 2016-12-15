@@ -30,8 +30,7 @@ video {
 
 
 .home {
-  background: $page-gradient;
-  background-size: 100% 100%;
+  background: $black;
   height: 100vh;
   width: 100vw;
 
@@ -55,7 +54,6 @@ video {
   color: $white;
   font-family: $title-font-family;
   font-size: 23px;
-  padding-top: 50px;
 
   h1 {
     &::before {
@@ -85,6 +83,7 @@ video {
 .home__btn {
   font-family: $title-font-family;
   font-weight: 600;
+  margin-top: 5vh;
 }
 
 .home__btnTxt {
@@ -93,22 +92,20 @@ video {
   color: $white;
   cursor: pointer;
   display: block;
-  font-family: $title-font-family;
-  font-size: 14px;
-  letter-spacing: .5px;
+  font-size: 12px;
   margin: 0 auto;
   outline: none;
   padding-bottom: 13px;
   padding-left: 21px;
   padding-right: 21px;
-  padding-top: 16px;
+  padding-top: 13px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .quickstart {
   align-items: center;
-  background: $page-gradient;
-  background-size: 100% 100%;
+  background: $black;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -194,7 +191,7 @@ video {
       width: 50%;
 
       img {
-        height: 35vh;
+        height: 40vh;
       }
 
       h2 {
@@ -211,10 +208,17 @@ video {
         letter-spacing: 1px;
       }
 
+      .firststep {
+
+      }
+
+      .secondstep {
+
+      }
+
       .url {
         color: $mauve;
         margin-top: 2vh;
-        font-weight: 400;
       }
     }
   }
