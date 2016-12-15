@@ -24,40 +24,44 @@
       </div>
     </aside>
     <main class="page-content">
-     <header class="page-title">
+      <header class="page-title">
         <img src="dist/media/img/quarter-moon.svg" alt="quarter moon" class="page-title-illu">
         <h1>Remerciements</h1>
       </header>
       <div class="association__realisatrice">
-       <div class="association">
-         <h1>L’association Enfants de la Lune </h1>
-         <div class="divider"></div>
-         <img src="src/media/img/asso_logo.png"/>
-       </div>
-       <div class="realisatrice">
-         <h1>Liza Mandelup</h1>
-         <div class="divider"></div>
-         <img src="src/media/img/liza.png"/>
-       </div>
-     </div>
-     <div class="don">
-       <h1>Soutenez les enfants de la lune </h1>
-       <p>
-         Faites un don afin de soutenir les familles
-         des malades et la recherche, pour sortir les
-         enfants de leur isolement et développer le masque
-       </p>
-       <div class="home__btn">
-         <a class="home__btnTxt" href="https://www.helloasso.com/don/associations/enfants-de-la-lune">Faire un don</a>
-       </div>
-     </div>
+        <div class="association">
+          <h1>L’association Enfants de la Lune </h1>
+          <div class="divider"></div>
+          <img src="src/media/img/asso_logo.png" />
+        </div>
+        <div class="realisatrice">
+          <h1>Liza Mandelup</h1>
+          <div class="divider"></div>
+          <img src="src/media/img/liza.png" />
+        </div>
+      </div>
+      <div class="don">
+        <h1>Soutenez les enfants de la lune </h1>
+        <p>
+          Faites un don afin de soutenir les familles des malades et la recherche, pour sortir les enfants de leur isolement et développer le masque
+        </p>
+        <div class="home__btn">
+          <a class="home__btnTxt" href="https://www.helloasso.com/don/associations/enfants-de-la-lune">Faire un don</a>
+        </div>
+      </div>
     </main>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
+  <script defer>
+    if (!window.jQuery) document.write(`<script defer src="dist/vendor/libs/jquery/dist/jquery.min.js"><\/script>`);
+  </script>
   <script src="https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.js" charset="utf-8"></script>
+  <script defer>
+    if (!window.jQuery.fn.roundSlider)
+      document.write(`<script defer src="dist/vendor/roundslider.min.js"><\/script>`);
+  </script>
   <script defer src="dist/js/bundle.js" charset="utf-8"></script>
-
 </body>
 
 </html>
