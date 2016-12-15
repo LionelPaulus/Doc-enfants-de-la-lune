@@ -169,6 +169,7 @@
 
 
 .page-legend {
+  animation: fadeIn .25s ease-out 3s normal paused 1 forwards;
   bottom: 15vh;
   font-family: $content-font-family;
   font-size: .9em;
@@ -177,10 +178,17 @@
   line-height: 1.05;
   margin: auto;
   max-width: 580px;
+  opacity: 0;
   position: relative;
   text-align: center;
   width: $moon-size;
+
+  &.reveal {
+    animation-play-state: running;
+  }
 }
+
+
 @keyframes dash {
   0% {
     stroke-dasharray: 2000;
