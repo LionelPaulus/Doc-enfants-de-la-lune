@@ -146,13 +146,15 @@
     border: 1px solid $white;
     color: $white;
     cursor: pointer;
-    font-size: 12px;
+    font-family: $title-font-family;
+    font-size: 14px;
+    letter-spacing: .5px;
     margin: 0 auto;
     outline: none;
     padding-bottom: 13px;
     padding-left: 21px;
     padding-right: 21px;
-    padding-top: 13px;
+    padding-top: 16px;
     text-align: center;
     text-decoration: none;
   }
