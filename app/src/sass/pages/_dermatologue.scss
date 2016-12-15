@@ -189,7 +189,20 @@
 .step {
   display: inline-block;
   vertical-align: top;
+  position: relative;
   width: 219px;
+  $target-size: 20px;
+  .target {
+    position: absolute;
+    width: $target-size;
+    border-radius: 50%;
+    height: $target-size;
+    background:yellow;
+    bottom: -4em;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
 }
 
 .light {
