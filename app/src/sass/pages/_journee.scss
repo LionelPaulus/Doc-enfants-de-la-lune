@@ -1,75 +1,76 @@
-
-.day {
-  display: flex;
-  height: auto;
-  margin-top: 45px;
-  max-width: 943px;
-  position: relative;
-  width: 100%;
-  > div {
+.page-journee {
+  .day {
+    display: flex;
     height: auto;
-    width: 50%;
-    video {
-      max-width: 100%;
+    margin-top: 45px;
+    max-width: 943px;
+    position: relative;
+    width: 100%;
+    > div {
+      height: auto;
+      width: 50%;
+      video {
+        max-width: 100%;
+      }
     }
+
+
+    &:nth-child(even) {
+      > div:nth-child(1) {
+        padding-right: 55px;
+      }
+
+      > div:nth-child(2) {
+        padding-left: 55px;
+      }
+    };
+
+    &:nth-child(odd) {
+      > div:nth-child(1) {
+        padding-left: 55px;
+      }
+
+      > div:nth-child(2) {
+        padding-right: 55px;
+      }
+    };
   }
 
 
-  &:nth-child(even) {
-    > div:nth-child(1) {
-      padding-right: 55px;
-    }
-
-    > div:nth-child(2) {
-      padding-left: 55px;
-    }
-  };
-
-  &:nth-child(odd) {
-    > div:nth-child(1) {
-      padding-left: 55px;
-    }
-
-    > div:nth-child(2) {
-      padding-right: 55px;
-    }
-  };
-}
+  p {
+    color: $white;
+    font-family: $content-font-family;
+    font-size: 15px;
+    font-weight: $fix-futura-book-weight;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding-top: 20px;
+  }
 
 
-p {
-  color: $white;
-  font-family: $content-font-family;
-  font-size: 15px;
-  font-weight: $fix-futura-book-weight;
-  letter-spacing: 1px;
-  line-height: 18px;
-  padding-top: 20px;
-}
-
-
-.text__day__title {
-  color: $white;
-  font-family: $content-font-family;
-  font-size: 21px;
-  letter-spacing: 2px;
-  margin-top: 10px;
-  text-transform: uppercase;
-}
+  .text__day__title {
+    color: $white;
+    font-family: $content-font-family;
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
 
 
 
-.divider-day {
-  background: $mauve;
-  height: 3px;
-  margin-left: 1em;
-  width: 50px;
-}
+  .divider-day {
+    background: $mauve;
+    height: 3px;
+    margin-left: 1em;
+    width: 50px;
+  }
 
-.light {
-  opacity: 1;
-}
+  .light {
+    opacity: 1;
+  }
 
-.dark {
-  opacity: .4;
+  .dark {
+    opacity: .4;
+  }
 }
