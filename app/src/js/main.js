@@ -22,7 +22,8 @@ case 'moon-test':
 case 'leo':
 
   new MoonTimeline('-95%');
-  new Reveal('lines', ø.all('svg circle.trigger'), true);
+  new Reveal('lines', ø.all('svg circle.trigger'));
+  torch.launchCamera();
 
   break;
 case 'suit':

@@ -67,12 +67,15 @@ export class Torch {
 
 
     this.targets = Object.keys(window.targets).map((key, index) => {
+
       const elem = window.targets[index];
       const coords = elem.getBoundingClientRect();
       elem.coords = {
         x: parseInt(coords.left - 11 + 4),
         y: parseInt(coords.top - 11 + 4),
       };
+      elem.parent = elem.parentNode.parentNode.parentNode;
+
       return elem;
     });
 
@@ -85,7 +88,7 @@ export class Torch {
     this.trackerTask = tracking.track('#video', this.tracker, {
       camera: true,
     });
-
+    this.enable = true;
 
     this.tracker.on('track', (event) => {
       if (event.data.length === 0) return; // No targets were detected in this frame.
@@ -114,8 +117,13 @@ export class Torch {
 
 
 
-        if (fakeRatio.x < 20 && fakeRatio.y < 20) {
+        if (fakeRatio.x < 20 && fakeRatio.y < 20
+        && target.parent.classList.contains('reveal') === false) {
           target.parentNode.parentNode.parentNode.classList.add('reveal');
+
+          if (!target.parent.parentNode.parentNode.querySelector('.focus:not(.reveal):not(.page-illu)')) {
+            window.reveal.lines.finish();
+          }
         }
       }
 
