@@ -1,6 +1,6 @@
-section {
-  display: none;
-}
 .active {
-  display: block;
+  display: block !important;
+}
+.disabled {
+  display: none;
 }
