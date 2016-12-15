@@ -26,6 +26,13 @@ case 'leo':
   torch.launchCamera();
 
   break;
+case 'dermatologue':
+
+  new MoonTimeline('-95%');
+  new Reveal('tabs', ø.all('.target.trigger'));
+  // torch.launchCamera();
+
+  break;
 case 'suit':
 
   new MoonTimeline('-100%');

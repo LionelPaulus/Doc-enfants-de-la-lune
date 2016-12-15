@@ -50,8 +50,7 @@
           </div>
         </div>
         <div class="step__dermatologue">
-          <div class="step security light">
-            <div class="target trigger"></div>
+          <div class="step security">
             <div class="step__title">
               <h1>génétique</h1>
             </div>
@@ -63,8 +62,7 @@
             </div>
             <div class="big-divider"></div>
           </div>
-          <div class="step night dark">
-            <div class="target trigger"></div>
+          <div class="step night">
             <div class="step__title">
               <h1>adn</h1>
             </div>
@@ -75,8 +73,7 @@
               </p>
             </div>
           </div>
-          <div class="step limited dark">
-            <div class="target trigger"></div>
+          <div class="step limited">
             <div class="step__title">
               <h1>danger</h1>
             </div>
@@ -87,6 +84,11 @@
               </p>
             </div>
           </div>
+        </div>
+        <div class="step__triggers">
+          <div class="target trigger" data-index="0"></div>
+          <div class="target trigger" data-index="1"></div>
+          <div class="target trigger" data-index="2"></div>
         </div>
       </div>
     </div>
@@ -100,6 +102,9 @@
       </a>
     </div>
   </section>
+  <script defer src="dist/vendor/tracking-min.js"></script>
+  <script defer src="dist/vendor/dat.gui.min.js"></script>
+  <script defer src="dist/vendor/stats.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
   <script defer>
     if (!window.jQuery) document.write(`<script defer src="dist/vendor/libs/jquery/dist/jquery.min.js"><\/script>`);

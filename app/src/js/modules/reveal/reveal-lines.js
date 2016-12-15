@@ -8,7 +8,7 @@ export class RevealLines {
       for (const target of targets) {
         const parent = target.parentNode.parentNode.parentNode;
         parent.classList.add('reveal');
-        ø.el('.page-legend').classList.add('reveal');
+        this.finish();
       }
 
 
