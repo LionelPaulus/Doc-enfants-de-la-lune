@@ -18,12 +18,12 @@
             <img class="home__mask__img" src="src/media/img/mask.png"/>
           </div>
           <div class="home__btn">
-            <button class="home__btnTxt">démarrer l'expérience</button>
+            <button class="home__btnTxt js-scrollTo" href="#quickstart">démarrer l'expérience</button>
           </div>
         </div>
       </div>
     </section>
-    <section div class="quickstart">
+    <section class="quickstart" id="quickstart">
       <div class="background-text"></div>
       <div class="instructions">
         <h1 class="instructions__title">intéragissez d'une façon unique</h1>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="home__btn">
-          <button class="home__btnTxt">continuer</button>
+          <button class="home__btnTxt" id="start">continuer</button>
         </div>
       </div>
       <div class="overlay"></div>
@@ -57,7 +57,8 @@
           <br><img src="dist/media/img/mouse.svg" alt="Souris">
         </a>
       </div>
-
     </section>
+    <script src="dist/vendor/libs/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/home.js"></script>
   </body>
 </html>
