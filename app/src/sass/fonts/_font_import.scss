@@ -123,7 +123,8 @@
 @font-face {
   font-family: 'Futura';
   src: url('hinted-Futura-Heavy.eot');
-  src: local('Futura Heavy'), local('Futura-Heavy'),
+  src:
+  // local('Futura Heavy'), local('Futura-Heavy'),
   url('../../dist/media/fonts/hinted-Futura-Heavy.eot?#iefix') format('embedded-opentype'),
   url('../../dist/media/fonts/hinted-Futura-Heavy.woff2') format('woff2'),
   url('../../dist/media/fonts/hinted-Futura-Heavy.woff') format('woff'),
@@ -136,7 +137,8 @@
 @font-face {
   font-family: 'Futura';
   src: url('hinted-Futura-ExtraBold.eot');
-  src: local('Futura Extra Bold'), local('Futura-ExtraBold'),
+  src:
+  // local('Futura Extra Bold'), local('Futura-ExtraBold'),
   url('../../dist/media/fonts/hinted-Futura-ExtraBold.eot?#iefix') format('embedded-opentype'),
   url('../../dist/media/fonts/hinted-Futura-ExtraBold.woff2') format('woff2'),
   url('../../dist/media/fonts/hinted-Futura-ExtraBold.woff') format('woff'),
@@ -149,7 +151,8 @@
 @font-face {
   font-family: 'Futura';
   src: url('hinted-Futura-Light.eot');
-  src: local('Futura Light'), local('Futura-Light'),
+  src:
+  //local('Futura Light'), local('Futura-Light'),
   url('../../dist/media/fonts/hinted-Futura-Light.eot?#iefix') format('embedded-opentype'),
   url('../../dist/media/fonts/hinted-Futura-Light.woff2') format('woff2'),
   url('../../dist/media/fonts/hinted-Futura-Light.woff') format('woff'),
@@ -162,7 +165,8 @@
 @font-face {
   font-family: 'Futura';
   src: url('hinted-Futura-Book.eot');
-  src: local('Futura Book'), local('Futura-Book'),
+  src:
+  //local('Futura Book'), local('Futura-Book'),
   url('../../dist/media/fonts/hinted-Futura-Book.eot?#iefix') format('embedded-opentype'),
   url('../../dist/media/fonts/hinted-Futura-Book.woff2') format('woff2'),
   url('../../dist/media/fonts/hinted-Futura-Book.woff') format('woff'),
@@ -176,7 +180,7 @@
   font-family: 'Futura';
   src: url('hinted-Futura.eot');
   src:
-  local('Futura Medium'), local('Futura'),
+  //local('Futura Medium'), local('Futura'),
   url('../../dist/media/fonts/hinted-Futura.eot?#iefix') format('embedded-opentype'),
   url('../../dist/media/fonts/hinted-Futura.woff2') format('woff2'),
   url('../../dist/media/fonts/hinted-Futura.woff') format('woff'),
@@ -189,7 +193,8 @@
 @font-face {
   font-family: 'Futura';
   src: url('hinted-Futura-Bold.eot');
-  src: local('Futura Bold'), local('Futura-Bold'),
+  src:
+  //local('Futura Bold'), local('Futura-Bold'),
   url('../../dist/media/fonts/hinted-Futura-Bold.eot?#iefix') format('embedded-opentype'),
   url('../../dist/media/fonts/hinted-Futura-Bold.woff2') format('woff2'),
   url('../../dist/media/fonts/hinted-Futura-Bold.woff') format('woff'),
