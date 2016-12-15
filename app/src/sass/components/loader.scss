@@ -51,11 +51,6 @@ $loader-ring-border-size: 4px;
   box-shadow: (0 0 10px $loader-ring-border-size rgba(black, .3) inset);
 }
 
-@keyframes fadeIn {
-  from{opacity: 0;}
-  to{opacity: 1;}
-}
-
 @keyframes rotate-360 {
   from {
     transform: rotate(0);
