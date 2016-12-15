@@ -242,7 +242,7 @@
 .overlay {
   background-color: $true-black; // Black fallback
   background-color: $overlay; // Black w/opacity
-  // display: none;
+  display: none;
   height: 100%;
   overflow-x: hidden;
   position: fixed;
@@ -253,7 +253,7 @@
 .popup {
   background-color: $white;
   border-radius: 25px;
-  // display: none;
+  display: none;
   left: 50%;
   min-width: 600px;
   padding: 35px;
