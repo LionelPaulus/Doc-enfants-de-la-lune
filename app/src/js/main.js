@@ -39,7 +39,6 @@ case 'sport':
 
 }
 
-
     // demoFlashlight.onmousemove = (e) => {
     //   torch.style.transform = `translate(${(e.pageX - 250)}px ,${e.pageY - 500}px)`;
     //   [].forEach.call(demoFlashlight.querySelectorAll('p'), (elem) => {
