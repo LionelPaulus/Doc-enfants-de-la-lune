@@ -10,6 +10,25 @@ html {
   overflow: inherit;
 }
 
+
+.home__mask {
+  height: 350px;
+  margin-bottom: 5vh;
+  margin-top: 10vh;
+  width: 100%;
+}
+
+
+video {
+  mask: url('../media/img/masque_good.svg');
+  mask-position: center;
+  mask-repeat: no-repeat;
+  min-width: 100%;
+  width: 250px;
+  z-index:  -1;
+}
+
+
 .home {
   background: $page-gradient;
   background-size: 100% 100%;
@@ -36,6 +55,7 @@ html {
   color: $white;
   font-family: $title-font-family;
   font-size: 23px;
+  padding-top: 50px;
 
   h1 {
     &::before {
@@ -62,23 +82,9 @@ html {
   }
 }
 
-.home__mask {
-  height: 350px;
-  margin-bottom: 10vh;
-  margin-top: 10vh;
-  width: 100%;
-}
-
-.home__mask__img {
-  display: block;
-  height: 100%;
-  margin: auto;
-}
-
 .home__btn {
   font-family: $title-font-family;
   font-weight: 600;
-  margin-top: 5vh;
 }
 
 .home__btnTxt {
