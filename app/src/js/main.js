@@ -97,6 +97,11 @@ $('.previous').on('click', () => {
   );
 }*/
 
+// Loader
+$(window).on('load', function() {
+  $(".loader").addClass('fadeOut');
+});
+
     // demoFlashlight.onmousemove = (e) => {
     //   torch.style.transform = `translate(${(e.pageX - 250)}px ,${e.pageY - 500}px)`;
     //   [].forEach.call(demoFlashlight.querySelectorAll('p'), (elem) => {

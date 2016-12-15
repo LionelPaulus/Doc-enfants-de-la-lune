@@ -32,8 +32,19 @@ video {
 .home {
   background: $page-gradient;
   background-size: 100% 100%;
-  height: 100vh;
-  width: 100vw;
+
+  #page-home {
+    height: 100vh;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s linear;
+    visibility: hidden;
+    width: 100vw;
+
+    &.fadeIn {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
   .background-text {
     background: url('../media/img/label_lune.svg');
