@@ -3,6 +3,7 @@ export class MoonTimeline {
     if (typeof $ === 'undefined')
       return console.error('you must import jquery for the moon timeline component');
 
+    window.moon = this;
     this.$ = {};
 
     const MoonDomNode = document.createElement('div');
