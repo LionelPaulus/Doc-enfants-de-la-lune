@@ -1,5 +1,6 @@
 export class Torch {
   constructor() {
+    console.log(this);
     window.torch = this;
     this.userMedia = this.hasGetUserMedia();
     this.cursor = this.renderCursor();
@@ -78,7 +79,7 @@ export class Torch {
 
       return elem;
     });
-    this.page = ø.el('.page').classList[1].replace('page-', '');
+    this.page = ø.el('.page.active').classList[2].replace('page-', '');
     const tracking = window.tracking;
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
@@ -112,7 +113,6 @@ export class Torch {
           x: Math.abs(fakeMouse.x - target.coords.x),
           y: Math.abs(fakeMouse.y - target.coords.y),
         };
-
 
 
         if (fakeRatio.x < 40 && fakeRatio.y < 40) {

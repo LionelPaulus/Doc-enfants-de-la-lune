@@ -8,12 +8,12 @@ import { Reveal } from './modules/reveal';
 
 window.ø = new DomManipulator();
 const ø = window.ø;
-
+const $ = window.$;
 const page = location.pathname.replace('.html', '').replace('/', '');
 const torch = new Torch();
 const moon = new MoonTimeline('-95%');
 const reveal = new Reveal('lines', ø.all('.page-leo svg circle.trigger'));
-//torch.launchCamera();
+torch.launchCamera();
 
 switch (page) {
 case 'moon-test':
@@ -52,45 +52,43 @@ case 'sport':
 
 // START.HTML JS
 
-var allSections = $('section.page');
-allSections.not(":eq(0)").addClass('disabled');
+const allSections = $('section.page');
+allSections.not(':eq(0)').addClass('disabled');
 allSections.eq(0).addClass('active');
-var pages  = ['leo','journee','suit','dermatologue','consequences','howToTreat','lune'];
-var i = 0;
-$('.next').on('click', function() {
-  if(i >= allSections.length - 1){
-    return false;
-  } else {
-    allSections.removeClass('active');
-    $('.page-' + pages[i]).addClass('disabled');
-    ++i;
-    $('.page-' + pages[i]).addClass('active');
+const pages = ['leo', 'journee', 'suit', 'dermatologue', 'consequences', 'howToTreat', 'lune'];
+let i = 0;
+$('.next').on('click', () => {
+  if (i >= allSections.length - 1) return false;
 
-    if(i == 1){
-      $('.previous').fadeIn();
-    }else if(i == (allSections.length - 1)){
-      $('.next').fadeOut();
-    }
+  allSections.removeClass('active');
+  $('.page-' + pages[i]).addClass('disabled');
+  ++i;
+  $('.page-' + pages[i]).addClass('active');
+
+  if (i === 1) {
+    $('.previous').fadeIn();
+  }
+  else if(i === (allSections.length - 1)) {
+    $('.next').fadeOut();
   }
 });
-$('.previous').on('click', function() {
-  if(i <= 0) {
+$('.previous').on('click', () => {
+  if (i <= 0)
     return false;
-  } else {
-    allSections.removeClass('active');
-    $('.page-' + pages[i]).addClass('disabled');
-    --i;
-    $('.page-' + pages[i]).addClass('active');
 
-    if(i == (allSections.length - 2)){
-      $('.next').fadeIn();
-    }else if(i == 0){
-      $('.previous').fadeOut();
-    }
+  allSections.removeClass('active');
+  $('.page-' + pages[i]).addClass('disabled');
+  --i;
+  $('.page-' + pages[i]).addClass('active');
+
+  if (i === (allSections.length - 2)) {
+    $('.next').fadeIn();
+  } else if (i === 0) {
+    $('.previous').fadeOut();
   }
 });
 /*if (i = 6 ){
-  $(".big__moon")
+  $(".big_moon")
     .css('opacity', 0)
     .slideUp('slow')
     .animate(
