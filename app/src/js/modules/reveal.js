@@ -6,6 +6,7 @@ export class Reveal {
   constructor(type, targets = document.body, debug = false) {
     window.reveal = this;
     window.targets = targets;
+    this.targets = targets;
 
     switch (type) {
     case 'lines':
@@ -17,6 +18,7 @@ export class Reveal {
     default:
       return null;
     }
+    return this;
   }
 
 

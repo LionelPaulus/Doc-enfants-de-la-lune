@@ -1,69 +1,55 @@
-import { InitGUIControllers } from './color_camera_gui';
 import { DomManipulator } from './models/class.dom-manipulator';
 import { MoonTimeline } from './modules/moon-timeline';
 import { RythmAlarm } from './modules/rythm-alarm';
 import { Torch } from './modules/torch';
-import { Reveal } from './modules/reveal';
+import { PageEvents } from './modules/page-events';
 // import { scrollDetect } from './scroll-detect';
 
 window.ø = new DomManipulator();
 const ø = window.ø;
 const $ = window.$;
-const page = location.pathname.replace('.html', '').replace('/', '');
-const torch = new Torch();
-const moon = new MoonTimeline('-95%');
-const reveal = new Reveal('lines', ø.all('.page-leo svg circle.trigger'));
-torch.launchCamera();
-
-switch (page) {
-case 'moon-test':
-
-  new MoonTimeline('-90%');
-
-  break;
-case 'leo':
-
-  new MoonTimeline('-95%');
-  new Reveal('lines', ø.all('svg circle.trigger'));
-  torch.launchCamera();
-
-  break;
-case 'dermatologue':
-
-  new MoonTimeline('-95%');
-  new Reveal('tabs', ø.all('.target.trigger'));
-  torch.launchCamera();
-
-  break;
-case 'suit':
-
-  new MoonTimeline('-100%');
-  new Reveal('lines', ø.all('svg circle.trigger'));
-  torch.launchCamera();
-  break;
-case 'rythm':
-case 'sport':
-
-  new MoonTimeline('-12.5%');
-
-  break;
-
-}
 
 // START.HTML JS
 
 const allSections = $('section.page');
 allSections.not(':eq(0)').addClass('disabled');
 allSections.eq(0).addClass('active');
-const pages = ['leo', 'journee', 'suit', 'dermatologue', 'consequences', 'howToTreat', 'lune'];
+const pages = [
+  {
+    tag: 'leo',
+    reveal: ['lines', ø.all('.page-leo svg circle.trigger')],
+
+  },
+  {
+    tag: 'journee',
+  },
+  {
+    tag: 'suit',
+    reveal: ['lines', ø.all('.page-suit svg circle.trigger')],
+  },
+  {
+    tag: 'dermatologue',
+  },
+  {
+    tag: 'consequences',
+  },
+  {
+    tag: 'howToTreat',
+  },
+  {
+    tag: 'lune',
+  },
+];
 let i = 0;
 $('.next').on('click', () => {
+  console.log(pageEvents);
   if (i >= allSections.length - 1) return false;
 
   allSections.removeClass('active');
-  $('.page-' + pages[i]).addClass('disabled');
+  $('.page-' + pages[i].tag).addClass('disabled');
   ++i;
-  $('.page-' + pages[i]).addClass('active');
+  $('.page-' + pages[i].tag).addClass('active');
+  const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
 
   if (i === 1) {
     $('.previous').fadeIn();
@@ -77,9 +63,9 @@ $('.previous').on('click', () => {
     return false;
 
   allSections.removeClass('active');
-  $('.page-' + pages[i]).addClass('disabled');
+  $('.page-' + pages[i].tag).addClass('disabled');
   --i;
-  $('.page-' + pages[i]).addClass('active');
+  $('.page-' + pages[i].tag).addClass('active');
 
   if (i === (allSections.length - 2)) {
     $('.next').fadeIn();
@@ -87,6 +73,14 @@ $('.previous').on('click', () => {
     $('.previous').fadeOut();
   }
 });
+
+
+const torch = new Torch();
+const moon = new MoonTimeline('-95%');
+const events = new PageEvents(pages.filter((e) => e.tag === pages[0].tag)[0]);
+//torch.launchCamera();
+
+
 /*if (i = 6 ){
   $(".big_moon")
     .css('opacity', 0)
