@@ -8,7 +8,7 @@
     position: relative;
     width: 100%;
     > div {
-      height: auto;
+      height: 200px;
       width: 40%;
       video {
         max-width: 100%;
@@ -49,6 +49,13 @@
     text-align: justify;
   }
 
+  .absolute-overlay{
+    position: absolute;
+    width: 40%;
+    height: 173px;
+    background: $mauve;
+    opacity: .4;
+  }
 
   .text__day__title {
     color: $white;

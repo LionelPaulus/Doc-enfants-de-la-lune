@@ -7,22 +7,6 @@
   <link rel="stylesheet" href="dist/css/app.css">
 </head>
   <body>
-    <aside class="page-commands">
-      <div class="previous">
-        <span class="bar"></span>
-        <a href="#"  id="buttonPrev" class="label prev">Précédent</a>
-      </div>
-      <div class="next">
-        <a href="#" id="buttonNext" class="label next">Suivant</a>
-        <span class="bar"></span>
-      </div>
-    </aside>
-    <div class="alarm-clock">
-      <div class="icon"></div>
-      <div class="time">
-        <span>2h00</span>
-      </div>
-    </div>
     <section class="page page-leo">
       <div class="background-text">
         LEO
@@ -33,7 +17,6 @@
             <div class="focus focus-consequent">
               <h3 class="focus-title">LÉO </h3>
               <svg class="focus-line" viewBox="266 44 201 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
                     <defs>
                         <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
                             <stop stop-color="#FFFFFF" offset="0%"></stop>
@@ -52,7 +35,6 @@
             </div>
             <div class="focus focus-isolant">
               <svg class="focus-line" viewBox="0 44 221 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
                   <defs>
                       <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
                           <stop stop-color="#FFFFFF" offset="0%"></stop>
@@ -73,7 +55,6 @@
             <div class="focus focus-incofortable">
               <h3 class="focus-title">EN CE2</h3>
               <svg class="focus-line" viewBox="301 44 214 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
               <defs>
                   <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
                       <stop stop-color="#FFFFFF" offset="0%"></stop>
@@ -142,12 +123,14 @@
             </p>
           </div>
           <div class="video_step">
+            <div class="absolute-overlay"></div>
             <video autoplay loop src="src/media/video/STAGE_5_PART_2.mp4"></video>
           </div>
         </div>
         <div class="clear"></div>
         <div class="day dark">
           <div class="video_step">
+            <div class="absolute-overlay"></div>
             <video autoplay loop src="src/media/video/STAGE_5_PART_3.mp4"></video>
           </div>
           <div class="text__day">
@@ -364,9 +347,9 @@
         <div class="consequences">
           <div class="consequences__center">
             <h2 class="consequences__data">4000</h2>
-            <h1 class="consequences__title">léo a + de 4000% de<br>risque d'avoir un cancer</h1>
+            <h1 class="consequences__title">léo a + de 4000% de<br>risques d'avoir un cancer</h1>
             <div class="consequences__line"></div>
-            <p class="consequences__content">Le risque moyen<br>est de 40%</p>
+            <p class="consequences__content">Le risque moyen est de<br>40% pour un cancer cutané</p>
           </div>
           <div class="flex large">
             <div class="consequences__left__top">
@@ -386,7 +369,7 @@
               <h2 class="consequences__data">2k</h2>
               <h1 class="consequences__title">léo doit porter une<br>combinaison à 2000€</h1>
               <div class="consequences__line"></div>
-              <p class="consequences__content">Cette combinaison n'est<br>même plus produite</p>
+              <p class="consequences__content">Cette combinaison n'est plus<br>produite depuis 2007</p>
             </div>
           </div>
           <div class="flex large center">
@@ -466,6 +449,23 @@
       </div>
 
     </section>
+
+    <aside class="page-commands">
+      <div class="previous">
+        <span class="bar"></span>
+        <a href="#"  id="buttonPrev" class="label prev">Précédent</a>
+      </div>
+      <div class="next">
+        <a href="#" id="buttonNext" class="label next">Suivant</a>
+        <span class="bar"></span>
+      </div>
+    </aside>
+    <div class="alarm-clock">
+      <div class="icon"></div>
+      <div class="time">
+        <span>2h00</span>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
     <script>
