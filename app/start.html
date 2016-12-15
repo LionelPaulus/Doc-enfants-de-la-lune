@@ -469,7 +469,6 @@
         $('.page-' + pages[i++]).addClass('active');
       }
     });
-
     $('#buttonPrev').on('click', function() {
       if( i <= 0 ) {
         return false;
@@ -480,6 +479,15 @@
         $('.page-' + pages[i]).addClass('active');
       }
     });
+    /*if (i = 6 ){
+      $(".big__moon")
+        .css('opacity', 0)
+        .slideUp('slow')
+        .animate(
+          { opacity: 1 },
+          { queue: false, duration: 'slow' }
+      );
+    }*/
     </script>
     <script defer>
       if (!window.jQuery) document.write(`<script defer src="dist/vendor/libs/jquery/dist/jquery.min.js"><\/script>`);
