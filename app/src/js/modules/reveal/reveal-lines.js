@@ -1,7 +1,20 @@
 export class RevealLines {
-  constructor(targets) {
+  constructor(targets, debug = false) {
     const ø = window.ø;
     const parents = ø.all('.page-focus .focus:not(.page-illu)');
+
+    // DEBUG MODE
+    if (debug)
+      for (const target of targets) {
+        const parent = target.parentNode.parentNode.parentNode;
+        parent.classList.add('reveal');
+        ø.el('.page-legend').classList.add('reveal');
+      }
+
+
+
+
+
     for (const target of targets) {
       const parent = target.parentNode.parentNode.parentNode;
 

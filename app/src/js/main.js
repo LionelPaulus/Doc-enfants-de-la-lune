@@ -23,7 +23,7 @@ case 'moon-test':
 case 'leo':
 
   new MoonTimeline('-95%');
-  new Reveal('lines', ø.all('svg circle.trigger'));
+  new Reveal('lines', ø.all('svg circle.trigger'), true);
 
   break;
 case 'suit':
