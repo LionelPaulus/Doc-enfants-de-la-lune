@@ -1,8 +1,9 @@
 export class Torch {
   constructor() {
+    window.torch = this;
     this.userMedia = this.hasGetUserMedia();
     this.cursor = this.renderCursor();
-    this.launchCamera();
+    //this.launchCamera();
     const body = document.body;
     const html = document.documentElement;
 
@@ -34,8 +35,6 @@ export class Torch {
         y: (e.pageY - halfWidth - (halfWidth / 2)),
         x: (e.pageX - halfWidth - (halfWidth / 2)),
       };
-
-      console.log(pos);
       // UPDATE CURSOR POS
       point.style.top = `${pos.y}px`;
       point.style.left = `${pos.x}px`;
@@ -65,13 +64,21 @@ export class Torch {
     document.body.appendChild(container);
 
 
-    this.target = ø.el('svg circle.trigger')
-    this.test = this.target.getBoundingClientRect();
-    this.test = {
-      x: parseInt(this.test.left - 11 + 4),
-      y: parseInt(this.test.top - 11 + 4),
-    }
 
+
+    this.targets = Object.keys(window.targets).map((key, index) => {
+
+      const elem = window.targets[index];
+      const coords = elem.getBoundingClientRect();
+      elem.coords = {
+        x: parseInt(coords.left - 11 + 4),
+        y: parseInt(coords.top - 11 + 4),
+      };
+      elem.parent = elem.parentNode.parentNode.parentNode;
+
+      return elem;
+    });
+    this.page = ø.el('.page').classList[1].replace('page-', '');
     const tracking = window.tracking;
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
@@ -79,7 +86,7 @@ export class Torch {
     this.trackerTask = tracking.track('#video', this.tracker, {
       camera: true,
     });
-
+    this.enable = true;
 
     this.tracker.on('track', (event) => {
       if (event.data.length === 0) return; // No targets were detected in this frame.
@@ -94,19 +101,45 @@ export class Torch {
       // const ratio = totalRect / totalWindow * 100;
       const newPosLeft = ((this.canvas.width - rect.x) / this.canvas.width) * 100;
       const newPosTop = (rect.y / this.canvas.height) * 100;
+
       const fakeMouse = {
         x: parseInt(this.pageWidth * (newPosLeft * 0.01)),
-        y: parseInt(this.pageHeight * (newPosTop * 0.01) - 146 - 60),
+        y: parseInt(this.pageHeight * (newPosTop * 0.01)),
       };
-      const fakeRatio = {
-        x: Math.abs(fakeMouse.x - this.test.x),
-        y: Math.abs(fakeMouse.y - this.test.y),
-      };
-      console.log(fakeRatio);
-      if (fakeRatio.x < 20 && fakeRatio.y < 20 ){
-        this.target = ø.el('.focus').classList.add('reveal')
 
+      for (const target of this.targets) {
+        const fakeRatio = {
+          x: Math.abs(fakeMouse.x - target.coords.x),
+          y: Math.abs(fakeMouse.y - target.coords.y),
+        };
+
+
+
+        if (fakeRatio.x < 40 && fakeRatio.y < 40) {
+          // SUIT && LEO
+          if ((this.page === 'suit' || this.page === 'leo') && target.parent.classList.contains('reveal') === false) {
+            target.parent.classList.add('reveal');
+
+            if (!target.parent.parentNode.parentNode.querySelector('.focus:not(.reveal):not(.page-illu)')) {
+              window.reveal.lines.finish();
+            }
+          }
+          // SUIT && LEO
+          if ((this.page === 'dermatologue') && target.parentLinked.classList.contains('reveal') === false) {
+            const previousActive = ø.el('.step.reveal');
+            if (previousActive) previousActive.classList.remove('reveal');
+
+            target.parentLinked.classList.add('reveal');
+            target.parentLinked.classList.add('lighted');
+            target.lighted = true;
+            if (!target.parentLinked.parentNode.querySelector('.step:not(.lighted)')) {
+              window.reveal.tabs.finish();
+            }
+          }
+        }
       }
+
+
       // UPDATE CURSOR POS
       this.cursor.style.top = `${newPosTop}%`;
       this.cursor.style.left = `${newPosLeft}%`;
