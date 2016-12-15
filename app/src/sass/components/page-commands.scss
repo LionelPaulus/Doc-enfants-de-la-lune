@@ -6,9 +6,11 @@
       transform: translateY(-50%);
     }
     & > .previous {
+      user-select: none;
       @include page-commands-previous;
     }
     & > .next {
+      user-select: none;
       @include page-commands-next;
     }
     .bar {
