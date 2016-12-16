@@ -12,8 +12,7 @@ const $ = window.$;
 // START.HTML JS
 
 const allSections = $('section.page');
-allSections.not(':eq(0)').addClass('disabled');
-allSections.eq(0).addClass('active');
+allSections.eq(0).show();
 const pages = [
   {
     tag: 'leo',
@@ -42,36 +41,52 @@ const pages = [
   },
 ];
 let i = 0;
+let alreadyClicked = false;
 $('.next').on('click', () => {
-  console.log(pageEvents);
-  if (i >= allSections.length - 1) return false;
+  if(alreadyClicked){
+    return false;
+  }else{
+    alreadyClicked = true;
 
-  allSections.removeClass('active');
-  $('.page-' + pages[i].tag).addClass('disabled');
-  ++i;
-  $('.page-' + pages[i].tag).addClass('active');
-  const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
+    if (i >= allSections.length - 1) return false;
 
-  if (i === 1) {
-    $('.previous').fadeIn();
-  }
-  else if(i === (allSections.length - 1)) {
-    $('.next').fadeOut();
+    $('.page-' + pages[i].tag).fadeOut(function(){
+      ++i;
+      $('.page-' + pages[i].tag).fadeIn();
+      const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
+
+      if (i === 1) {
+        $('.previous').fadeIn();
+      }
+      else if(i === (allSections.length - 1)) {
+        $('.next').fadeOut();
+      }
+
+      alreadyClicked = false;
+    });
   }
 });
 $('.previous').on('click', () => {
-  if (i <= 0)
+  if(alreadyClicked){
     return false;
+  }else{
+    alreadyClicked = true;
 
-  allSections.removeClass('active');
-  $('.page-' + pages[i].tag).addClass('disabled');
-  --i;
-  $('.page-' + pages[i].tag).addClass('active');
+    if (i <= 0)
+      return false;
 
-  if (i === (allSections.length - 2)) {
-    $('.next').fadeIn();
-  } else if (i === 0) {
-    $('.previous').fadeOut();
+    $('.page-' + pages[i].tag).fadeOut(function(){
+      --i;
+      $('.page-' + pages[i].tag).fadeIn();
+
+      if (i === (allSections.length - 2)) {
+        $('.next').fadeIn();
+      } else if (i === 0) {
+        $('.previous').fadeOut();
+      }
+
+      alreadyClicked = false;
+    });
   }
 });
 

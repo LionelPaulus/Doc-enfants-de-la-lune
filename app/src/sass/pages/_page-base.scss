@@ -1,11 +1,12 @@
 body {
+  background: $page-gradient;
+  background-size: 100% 100%;
   overflow: hidden;
 }
 
 .page {
-  background: $page-gradient;
-  background-size: 100% 100%;
   color: $white;
+  display: none;
   height: 100vh;
   overflow: hidden;
   width: 100vw;
