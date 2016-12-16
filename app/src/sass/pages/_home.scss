@@ -32,6 +32,7 @@ video {
 .home {
   background: $page-gradient;
   background-size: 100% 100%;
+  display: block;
 
   #page-home {
     height: 100vh;
