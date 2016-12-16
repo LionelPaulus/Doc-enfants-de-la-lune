@@ -101,7 +101,7 @@ $('.previous').on('click', () => {
 
 
 const torch = new Torch();
-const moon = new MoonTimeline('-90%');
+const moon = new MoonTimeline('-92%');
 const events = new PageEvents(pages.filter((e) => e.tag === pages[0].tag)[0]);
 moon.setValue(pages[0].moonPos);
 torch.launchCamera();
