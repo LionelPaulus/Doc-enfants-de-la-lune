@@ -39,7 +39,7 @@ export class Torch {
       // UPDATE CURSOR POS
       point.style.top = `${pos.y}px`;
       point.style.left = `${pos.x}px`;
-      this.light.style.backgroundPosition = `${e.clientX-400}px ${e.clientY-400}px`;
+      this.light.style.backgroundPosition = `${e.clientX - 300}px ${e.clientY - 300}px`;
     });
 
     // RETURN DOM NODE

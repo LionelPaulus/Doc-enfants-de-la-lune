@@ -24,6 +24,8 @@
     .focus-line {
       animation: dash 2s ease-out 0s normal paused 1 forwards;
       stroke-dashoffset: 2000;
+      position: relative;
+      z-index: 4;
     }
     .focus-title {
       animation: fadeIn .25s ease-in 2s normal paused 1 forwards;
@@ -46,11 +48,6 @@
 
     }
 
-    circle.trigger {
-      filter: drop-shadow(55px 55px 55px red);
-      position: relative;
-      z-index: 10;
-    }
 
 
 
