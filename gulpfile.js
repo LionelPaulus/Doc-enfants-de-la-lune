@@ -51,9 +51,7 @@ gulp.task("importHomeJS", () => {
   gulp.src("./app/src/js/home.js").pipe(gulp.dest("./app/dist/js/"));
 });
 gulp.task("importVideos", () => {
-
-    gulp.src("./app/src/video/*.mp4").pipe(gulp.dest("./app/dist/video"));
-
+  gulp.src("./app/src/media/video/*").pipe(gulp.dest("./app/dist/media/video"));
 });
 
 gulp.task('build', ['importImages', 'importDatas', 'importHomeJS', 'importVideos', 'sass', 'vendor', 'importFonts'], () => {
