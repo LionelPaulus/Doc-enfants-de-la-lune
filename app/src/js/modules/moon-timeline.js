@@ -25,9 +25,14 @@ export class MoonTimeline {
       readOnly: true,
     });
 
-    for (let i = 0; i < 6; i++) {
-      const step = document.createElement('li');
-      this.$.container[0].appendChild(step);
-    }
+    // for (let i = 0; i < 6; i++) {
+    //   const step = document.createElement('li');
+    //   this.$.container[0].appendChild(step);
+    // }
+  }
+
+
+  setValue(value) {
+    window.moon.setValue(value, 1);
   }
 }

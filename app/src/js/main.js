@@ -15,27 +15,34 @@ allSections.eq(0).show();
 const pages = [
   {
     tag: 'leo',
+    moonPos: 15,
     reveal: ['lines', ø.all('.page-leo svg circle.trigger')],
 
   },
   {
     tag: 'journee',
+    moonPos: 19,
+
   },
   {
     tag: 'suit',
+    moonPos: 23,
     reveal: ['lines', ø.all('.page-suit svg circle.trigger')],
   },
   {
     tag: 'dermatologue',
+    moonPos: 27,
     reveal: ['tabs', ø.all('.page-dermatologue .target.trigger')],
     lights: false,
 
   },
   {
+    moonPos: 31,
     lights: true,
     tag: 'consequences',
   },
   {
+    moonPos: 35,
     tag: 'howToTreat',
   },
   {
@@ -53,6 +60,7 @@ $('.next').on('click', () => {
 
   $('.page-' + pages[i].tag).fadeOut(() => {
     ++i;
+    moon.setValue(pages[i].moonPos);
     $('.page-' + pages[i].tag).fadeIn();
     const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
 
@@ -62,7 +70,6 @@ $('.next').on('click', () => {
     else if (i === (allSections.length - 1)) {
       $('.next').fadeOut();
     }
-
     alreadyClicked = false;
   });
 });
@@ -75,6 +82,7 @@ $('.previous').on('click', () => {
 
   $('.page-' + pages[i].tag).fadeOut(() => {
     --i;
+    moon.setValue(pages[i].moonPos);
     $('.page-' + pages[i].tag).fadeIn();
 
     if (i === (allSections.length - 2)) {
@@ -91,6 +99,7 @@ $('.previous').on('click', () => {
 const torch = new Torch();
 const moon = new MoonTimeline('-90%');
 const events = new PageEvents(pages.filter((e) => e.tag === pages[0].tag)[0]);
+moon.setValue(pages[0].moonPos);
 //torch.launchCamera();
 
 

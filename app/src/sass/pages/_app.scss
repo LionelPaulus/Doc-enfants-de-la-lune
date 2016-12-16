@@ -40,9 +40,9 @@
   top: 0;
   width: 100%;
   z-index: 1;
-  transition: opacity 3s linear, transform 2s ease-in;
+  transition: opacity 3s linear, transform 1s ease-in;
   &.on {
     opacity: 0;
-    transform: scale(3);
+    transform: scale(10);
   }
 }
