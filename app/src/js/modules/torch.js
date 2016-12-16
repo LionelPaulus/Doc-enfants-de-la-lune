@@ -52,9 +52,7 @@ export class Torch {
       video.height = 450;
       video.id = 'video';
       window.delayAction = false;
-      setInterval( () => {
-        console.log(window.delayAction);
-      });
+
       const canvas = document.createElement('canvas');
       canvas.width = 600;
       canvas.height = 450;
@@ -154,7 +152,7 @@ export class Torch {
             }
           }
         }
-        for (const command of this.commands) {
+        for (const command of window.commands) {
           const fakeRatio = {
             x: Math.abs(fakeMouse.x - command.coords.x),
             y: Math.abs(fakeMouse.y - command.coords.y),
