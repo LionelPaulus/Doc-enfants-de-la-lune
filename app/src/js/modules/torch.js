@@ -37,8 +37,7 @@ export class Torch {
         x: (e.pageX - halfWidth - (halfWidth / 2)),
       };
       // UPDATE CURSOR POS
-      point.style.top = `${pos.y}px`;
-      point.style.left = `${pos.x}px`;
+      point.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`;
       this.light.style.backgroundPosition = `${e.clientX - 300}px ${e.clientY - 300}px`;
     });
 
@@ -131,6 +130,7 @@ export class Torch {
             const previousActive = ø.el('.step.reveal');
             if (previousActive) previousActive.classList.remove('reveal');
 
+            target.activeBar.style.transform = `translateX(${this.activeBar.move * index}px)`;
             target.parentLinked.classList.add('reveal');
             target.parentLinked.classList.add('lighted');
             target.lighted = true;
@@ -143,9 +143,7 @@ export class Torch {
       }
 
       // UPDATE CURSOR POS
-      this.cursor.style.top = `${newPosTop}%`;
-      this.cursor.style.left = `${newPosLeft}%`;
-      console.log(rect.x, rect.y);
+      this.cursor.style.transform = `translate3d(${newPosLeft}%, ${newPosTop}%, 0)`;
       this.light.style.backgroundPosition = `${-rect.x * 1.75}px ${rect.y}px`;
 
       // // RENDER TRACK

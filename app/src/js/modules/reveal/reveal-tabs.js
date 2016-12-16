@@ -1,7 +1,6 @@
 export class RevealTabs {
   constructor(targets, debug = false) {
     const ø = window.ø;
-    const parents = ø.all('.step__triggers .step');
     // DEBUG MODE
     if (debug)
       for (const target of targets) {
@@ -9,6 +8,8 @@ export class RevealTabs {
         parent.classList.add('reveal');
         this.finish();
       }
+    this.activeBar = ø.el('.big-divider');
+    this.activeBar.move = $('.step').width();
 
     for (const target of targets) {
       const index = target.getAttribute('data-index');
@@ -21,6 +22,7 @@ export class RevealTabs {
           const previousActive = ø.el('.step.reveal');
           if (previousActive) previousActive.classList.remove('reveal');
 
+          this.activeBar.style.transform = `translateX(${this.activeBar.move * index}px)`;
           parent.classList.add('reveal');
           parent.classList.add('lighted');
           target.lighted = true;

@@ -194,7 +194,7 @@
   padding-top: 15px;
 }
 .dermatologue__txt {
-  animation: fadeIn .25s ease-out .5s normal paused 1 forwards;
+  animation: fadeIn .25s ease-out .5s normal running 1 forwards;
   color: $white;
   font-family: $content-font-family;
   font-size: 15px;
@@ -297,9 +297,10 @@ $target-size: 20px;
 .big-divider {
   background: $mauve;
   height: 5px;
-  margin: auto;
+  margin-left: 6.5%;
   margin-top: 20px;
-  width:85%;
+  transition: transform .3s ease-in-out;
+  width: 25%;
 }
 
 
