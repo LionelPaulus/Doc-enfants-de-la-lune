@@ -18,21 +18,25 @@ html {
   width: 100%;
 }
 
-
-video {
-  mask: url('../media/img/masque_good.svg');
-  mask-position: center;
-  mask-repeat: no-repeat;
-  min-width: 100%;
-  position: relative;
-  width: 250px;
+.home_video {
+  video {
+    mask: url('../media/img/masque_good.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    min-width: 100%;
+    position: relative;
+    width: 250px;
+  }
 }
-
 
 .home {
   background: $page-gradient;
   background-size: 100% 100%;
   display: block;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 
   #page-home {
     height: 100vh;
@@ -125,6 +129,10 @@ video {
   height: 100vh;
   justify-content: center;
   width: 100vw;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 
   .background-text {
     background: url('../media/img/label_link.svg');
@@ -316,6 +324,27 @@ video {
         margin-top: 1vh;
         width: 3vh;
       }
+    }
+  }
+}
+.logo-mobile {
+  background: $true-black;
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+
+  video {
+    width: 100%;
+
+    &::-internal-media-controls-overlay-cast-button {
+      display: none;
     }
   }
 }

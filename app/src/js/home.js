@@ -7,9 +7,14 @@ $(window).on('load', function() {
     $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
     return false;
   });
+
   $('#start').on('click', function() {
     $('#page-quickstart').fadeOut(function(){
       location.href='start.html';
     });
+  });
+
+  $('#video-mobile').on('click', function(){
+    this.play();
   });
 });
