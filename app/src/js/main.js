@@ -10,6 +10,11 @@ const ø = window.ø;
 const $ = window.$;
 
 // START.HTML JS
+var flashlight = document.getElementById('flashlight');
+
+// flashlight.onmousemove = function(event) {
+//   this.style.backgroundPosition = (event.clientX-200) + 'px ' + (event.clientY-200) + 'px';
+// }
 
 const allSections = $('section.page');
 allSections.not(':eq(0)').addClass('disabled');
@@ -43,7 +48,6 @@ const pages = [
 ];
 let i = 0;
 $('.next').on('click', () => {
-  console.log(pageEvents);
   if (i >= allSections.length - 1) return false;
 
   allSections.removeClass('active');
