@@ -346,5 +346,10 @@ html {
     &::-internal-media-controls-overlay-cast-button {
       display: none;
     }
+
+    &::-webkit-media-controls-start-playback-button {
+      display: none!important;
+      -webkit-appearance: none;
+    }
   }
 }
