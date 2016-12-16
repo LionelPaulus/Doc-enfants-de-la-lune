@@ -19,6 +19,13 @@
     .consequences {
       text-align: center;
 
+      .anim-intro {
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-name: consequenceIntro;
+        opacity: 0;
+      }
+
       .consequences__line {
         background-color: $mauve;
         height: 1.5px;
@@ -57,19 +64,23 @@
       }
 
       .consequences__left__top {
+        animation-delay: 400ms;
         width: 40%;
       }
 
       .consequences__right__top {
+        animation-delay: 800ms;
         width: 40%;
         margin-top: 5vh;
       }
 
       .consequences__left__bottom {
+        animation-delay: 200ms;
         margin-right: 5vw;
       }
 
       .consequences__right__bottom {
+        animation-delay: 600ms;
         margin-left: 5vw;
         margin-top: 5vh;
       }
@@ -110,5 +121,16 @@
         }
       }
     }
+  }
+}
+
+@keyframes consequenceIntro {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
