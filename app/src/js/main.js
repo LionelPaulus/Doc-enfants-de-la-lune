@@ -69,6 +69,7 @@ $('.next').on('click', () => {
     }
     else if (i === (allSections.length - 1)) {
       $('.next').fadeOut();
+      $('#moon').fadeOut();
     }
     alreadyClicked = false;
   });
@@ -87,6 +88,7 @@ $('.previous').on('click', () => {
 
     if (i === (allSections.length - 2)) {
       $('.next').fadeIn();
+      $('#moon').fadeIn();
     } else if (i === 0) {
       $('.previous').fadeOut();
     }
