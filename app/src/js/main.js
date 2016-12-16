@@ -28,8 +28,11 @@ const pages = [
   {
     tag: 'dermatologue',
     reveal: ['tabs', ø.all('.page-dermatologue .target.trigger')],
+    lights: false,
+
   },
   {
+    lights: true,
     tag: 'consequences',
   },
   {

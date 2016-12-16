@@ -20,12 +20,13 @@
     width: 75%;
   }
 
+
   .page-focus {
     .focus-line {
       animation: dash 2s ease-out 0s normal paused 1 forwards;
       stroke-dashoffset: 2000;
       position: relative;
-      z-index: 4;
+      z-index: 2;
     }
     .focus-title {
       animation: fadeIn .25s ease-in 2s normal paused 1 forwards;
@@ -47,6 +48,8 @@
       opacity: 0;
 
     }
+
+
 
 
 
