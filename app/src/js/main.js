@@ -9,12 +9,6 @@ window.ø = new DomManipulator();
 const ø = window.ø;
 const $ = window.$;
 
-// START.HTML JS
-var flashlight = document.getElementById('flashlight');
-
-// flashlight.onmousemove = function(event) {
-//   this.style.backgroundPosition = (event.clientX-200) + 'px ' + (event.clientY-200) + 'px';
-// }
 
 const allSections = $('section.page');
 allSections.eq(0).show();
@@ -33,7 +27,7 @@ const pages = [
   },
   {
     tag: 'dermatologue',
-    reveal: ['tabs',  ø.all('.page-dermatologue .target.trigger')]
+    reveal: ['tabs', ø.all('.page-dermatologue .target.trigger')],
   },
   {
     tag: 'consequences',
@@ -48,58 +42,53 @@ const pages = [
 let i = 0;
 let alreadyClicked = false;
 $('.next').on('click', () => {
-  if(alreadyClicked){
-    return false;
-  }else{
-    alreadyClicked = true;
+  if (alreadyClicked) return false;
 
-    if (i >= allSections.length - 1) return false;
+  alreadyClicked = true;
 
-    $('.page-' + pages[i].tag).fadeOut(function(){
-      ++i;
-      $('.page-' + pages[i].tag).fadeIn();
-      const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
+  if (i >= allSections.length - 1) return false;
 
-      if (i === 1) {
-        $('.previous').fadeIn();
-      }
-      else if(i === (allSections.length - 1)) {
-        $('.next').fadeOut();
-      }
+  $('.page-' + pages[i].tag).fadeOut(() => {
+    ++i;
+    $('.page-' + pages[i].tag).fadeIn();
+    const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
 
-      alreadyClicked = false;
-    });
-  }
+    if (i === 1) {
+      $('.previous').fadeIn();
+    }
+    else if (i === (allSections.length - 1)) {
+      $('.next').fadeOut();
+    }
+
+    alreadyClicked = false;
+  });
 });
 $('.previous').on('click', () => {
-  if(alreadyClicked){
-    return false;
-  }else{
-    alreadyClicked = true;
+  if (alreadyClicked) return false;
 
-    if (i <= 0)
-      return false;
+  alreadyClicked = true;
 
-    $('.page-' + pages[i].tag).fadeOut(function(){
-      --i;
-      $('.page-' + pages[i].tag).fadeIn();
+  if (i <= 0) return false;
 
-      if (i === (allSections.length - 2)) {
-        $('.next').fadeIn();
-      } else if (i === 0) {
-        $('.previous').fadeOut();
-      }
+  $('.page-' + pages[i].tag).fadeOut(() => {
+    --i;
+    $('.page-' + pages[i].tag).fadeIn();
 
-      alreadyClicked = false;
-    });
-  }
+    if (i === (allSections.length - 2)) {
+      $('.next').fadeIn();
+    } else if (i === 0) {
+      $('.previous').fadeOut();
+    }
+
+    alreadyClicked = false;
+  });
 });
 
 
 const torch = new Torch();
 const moon = new MoonTimeline('-90%');
 const events = new PageEvents(pages.filter((e) => e.tag === pages[0].tag)[0]);
-//torch.launchCamera();
+torch.launchCamera();
 
 
 /*if (i = 6 ){
