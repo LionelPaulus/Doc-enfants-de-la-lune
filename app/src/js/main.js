@@ -64,7 +64,16 @@ $('.next').on('click', () => {
     torch.page = pages[i].tag;
     $('.page-' + pages[i].tag).fadeIn();
     const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
-
+    window.commands = ø.all('.page-commands > div');
+    window.commands = Object.keys(window.commands).map((key, index) => {
+      const elem = window.commands[index];
+      const coords = elem.getBoundingClientRect();
+      elem.coords = {
+        x: parseInt(coords.left - 11 + 4),
+        y: parseInt(coords.top - 11 + 4),
+      };
+      return elem;
+    });
     if (i === 1) {
       $('.previous').fadeIn();
     }
@@ -87,7 +96,16 @@ $('.previous').on('click', () => {
     moon.setValue(pages[i].moonPos);
     torch.page = pages[i].tag;
     $('.page-' + pages[i].tag).fadeIn();
-
+    window.commands = ø.all('.page-commands > div');
+    window.commands = Object.keys(window.commands).map((key, index) => {
+      const elem = window.commands[index];
+      const coords = elem.getBoundingClientRect();
+      elem.coords = {
+        x: parseInt(coords.left - 11 + 4),
+        y: parseInt(coords.top - 11 + 4),
+      };
+      return elem;
+    });
     if (i === (allSections.length - 2)) {
       $('.next').fadeIn();
       $('#moon').fadeIn();
