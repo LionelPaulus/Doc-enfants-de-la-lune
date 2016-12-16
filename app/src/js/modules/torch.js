@@ -130,6 +130,7 @@ export class Torch {
             const previousActive = ø.el('.step.reveal');
             if (previousActive) previousActive.classList.remove('reveal');
 
+            target.activeBar.style.transform = `translateX(${this.activeBar.move * index}px)`;
             target.parentLinked.classList.add('reveal');
             target.parentLinked.classList.add('lighted');
             target.lighted = true;

@@ -22,7 +22,7 @@ export class RevealTabs {
           const previousActive = ø.el('.step.reveal');
           if (previousActive) previousActive.classList.remove('reveal');
 
-          this.activeBar.style.transform = `translateX(${this.activeBar.move* index}px)`;
+          this.activeBar.style.transform = `translateX(${this.activeBar.move * index}px)`;
           parent.classList.add('reveal');
           parent.classList.add('lighted');
           target.lighted = true;
