@@ -19,6 +19,7 @@
   right: 0;
   transform: translateY(-5%);
   width: $moon-size !important;
+  z-index: 2;
 }
 
 
@@ -63,13 +64,13 @@
 
 @mixin MoonCursor {
   .rs-handle {
-    background-color:$white;
+    background-color: $white;
+    border-radius: 50%;
     box-shadow:
     0 0 0 5px rgba(255, 255, 255, 1),
     0 0 0 10px  rgba(255, 255, 255, .45),
     0 0 0 15px rgba(255, 255, 255, .65);
     margin-left: -4px!important;
-
   }
 }
 
