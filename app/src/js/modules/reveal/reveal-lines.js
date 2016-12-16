@@ -17,6 +17,7 @@ export class RevealLines {
 
     for (const target of targets) {
       const parent = target.parentNode.parentNode.parentNode;
+      target.parentLinked = parent;
 
       target.parentNode.addEventListener('mouseenter', (e) => {
         if (e.path.indexOf(target.parentNode) >= 0 && parent.classList.contains('reveal') === false) {
