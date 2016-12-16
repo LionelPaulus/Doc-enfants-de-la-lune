@@ -52,9 +52,6 @@ export class Torch {
       video.height = 450;
       video.id = 'video';
       window.delayAction = false;
-      setInterval( () => {
-        console.log(window.delayAction);
-      });
       const canvas = document.createElement('canvas');
       canvas.width = 600;
       canvas.height = 450;
@@ -166,14 +163,17 @@ export class Torch {
               window.delayAction = true;
               setTimeout(() => {
                 window.delayAction = false;
-              }, 5000);
+              }, 4000);
             }
           }
         }
 
+        console.log(this.pageWidth, this.pageHeight);
         // UPDATE CURSOR POS
         this.cursor.style.transform = `translate3d(${newPosLeft}vw, ${newPosTop}vh, 0)`;
-        this.light.style.backgroundPosition = `${-rect.x}px ${rect.y}px`;
+        this.light.style.backgroundPosition = `
+        ${(this.pageWidth * newPosLeft / 100) - 300 }px;
+        ${(this.pageHeight * newPosTop / 100) - 300}px`;
 
         // // RENDER TRACK
         // point.style.transform = `translate3d(${newPosLeft}vw ,${newPosTop}vh, 0`;
