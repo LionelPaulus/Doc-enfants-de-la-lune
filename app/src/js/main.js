@@ -61,6 +61,7 @@ $('.next').on('click', () => {
   $('.page-' + pages[i].tag).fadeOut(() => {
     ++i;
     moon.setValue(pages[i].moonPos);
+    torch.page = pages[i].tag;
     $('.page-' + pages[i].tag).fadeIn();
     const events = new PageEvents(pages.filter((e) => e.tag === pages[i].tag)[0]);
 
@@ -84,6 +85,7 @@ $('.previous').on('click', () => {
   $('.page-' + pages[i].tag).fadeOut(() => {
     --i;
     moon.setValue(pages[i].moonPos);
+    torch.page = pages[i].tag;
     $('.page-' + pages[i].tag).fadeIn();
 
     if (i === (allSections.length - 2)) {
@@ -102,7 +104,7 @@ const torch = new Torch();
 const moon = new MoonTimeline('-90%');
 const events = new PageEvents(pages.filter((e) => e.tag === pages[0].tag)[0]);
 moon.setValue(pages[0].moonPos);
-//torch.launchCamera();
+torch.launchCamera();
 
 
 /*if (i = 6 ){

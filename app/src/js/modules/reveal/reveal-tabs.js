@@ -16,6 +16,9 @@ export class RevealTabs {
       const parent = target.parentNode.parentNode.children[1].children[index];
       target.lighted = false;
       target.parentLinked = parent;
+      target.activeBar = this.activeBar;
+      target.move = this.activeBar.move;
+      target.index = index;
 
       target.addEventListener('mouseenter', () => {
         if (parent.classList.contains('reveal') === false) {

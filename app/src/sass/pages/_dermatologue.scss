@@ -232,6 +232,8 @@
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 .step {
@@ -260,33 +262,33 @@ $target-size: 1em;
 
 .step__triggers .target.trigger {
 
-    &:before {
-      content: '';
-      position: relative;
-      display: block;
-      width: 300%;
-      height: 300%;
-      box-sizing: border-box;
-      margin-left: -100%;
-      margin-top: -100%;
-      border-radius: 45px;
-      background-color: #B61282;
-      animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    }
+  &:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 45px;
+    background-color: #B61282;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 0 8px rgba(0,0,0,.3);
-      animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+  }
 
 
 

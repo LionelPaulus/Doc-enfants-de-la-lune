@@ -15,7 +15,6 @@ export class PageEvents {
       }
       if (key === 'lights') {
         this.light = document.getElementById('flashlight');
-        console.log(v);
         if (v) {
           this.light.className = 'flashlight on';
         }

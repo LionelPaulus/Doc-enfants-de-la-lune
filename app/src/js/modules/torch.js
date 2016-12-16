@@ -98,6 +98,7 @@ export class Torch {
       if (rect.color === 'custom') {
         rect.color = this.tracker.customColor;
       }
+
       // zoom ratio
       // const totalRect = rect.height + rect.width;
       // const ratio = totalRect / totalWindow * 100;
@@ -115,11 +116,14 @@ export class Torch {
           y: Math.abs(fakeMouse.y - target.coords.y),
         };
 
-
-        if (fakeRatio.x < 40 && fakeRatio.y < 40) {
+        if (fakeRatio.x < 50 && fakeRatio.y < 50) {
           // SUIT && LEO
-          if ((this.page === 'suit' || this.page === 'leo') && target.parent.classList.contains('reveal') === false) {
-            target.parent.classList.add('reveal');
+          console.log(this.page, target.parentLinked);
+
+
+          if ((this.page === 'suit' || this.page === 'leo') && target.parentLinked.classList.contains('reveal') === false) {
+            console.log("gogogoogogogogogogo");
+            target.parentLinked.classList.add('reveal');
 
             if (!target.parent.parentNode.parentNode.querySelector('.focus:not(.reveal):not(.page-illu)')) {
               window.reveal.lines.finish();
@@ -129,8 +133,8 @@ export class Torch {
           if ((this.page === 'dermatologue') && target.parentLinked.classList.contains('reveal') === false) {
             const previousActive = ø.el('.step.reveal');
             if (previousActive) previousActive.classList.remove('reveal');
-
-            target.activeBar.style.transform = `translateX(${this.activeBar.move * index}px)`;
+            const move = $('.step').width();
+            target.activeBar.style.transform = `translateX(${move * target.index}px)`;
             target.parentLinked.classList.add('reveal');
             target.parentLinked.classList.add('lighted');
             target.lighted = true;
@@ -143,8 +147,8 @@ export class Torch {
       }
 
       // UPDATE CURSOR POS
-      this.cursor.style.transform = `translate3d(${newPosLeft}%, ${newPosTop}%, 0)`;
-      this.light.style.backgroundPosition = `${-rect.x * 1.75}px ${rect.y}px`;
+      this.cursor.style.transform = `translate3d(${newPosLeft}vw, ${newPosTop}vh, 0)`;
+      this.light.style.backgroundPosition = `${-rect.x}px ${rect.y}px`;
 
       // // RENDER TRACK
       // point.style.transform = `translate3d(${newPosLeft}vw ,${newPosTop}vh, 0`;
