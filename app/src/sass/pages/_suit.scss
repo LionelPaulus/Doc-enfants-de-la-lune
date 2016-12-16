@@ -143,7 +143,11 @@
         font-weight: 100;
         letter-spacing: 2px;
         width: 50%;
+        z-index: 2;
 
+        @media screen and (min-width: 1920px){
+          padding-top: 15px;
+        }
       }
       &-line {
         box-sizing: border-box;
