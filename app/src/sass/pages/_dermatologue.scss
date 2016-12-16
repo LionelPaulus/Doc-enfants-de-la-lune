@@ -192,6 +192,8 @@
 .video__infos {
   margin-left: 40px;
   padding-top: 15px;
+  position: relative;
+    z-index: 3;
 }
 .dermatologue__txt {
   animation: fadeIn .25s ease-out .5s normal running 1 forwards;
