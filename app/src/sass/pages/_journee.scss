@@ -1,5 +1,11 @@
 .page-journee {
 
+  .background-text {
+    background: url('../media/img/label_jour.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
   .day {
     display: flex;
     height: auto;

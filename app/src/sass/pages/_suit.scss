@@ -1,3 +1,19 @@
+.page-suit {
+  .background-text {
+    background: url('../media/img/label_combi.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+.page-leo {
+  .background-text {
+    background: url('../media/img/label_leo.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}
+
 .page-suit,
 .page-leo {
   .page-content {
