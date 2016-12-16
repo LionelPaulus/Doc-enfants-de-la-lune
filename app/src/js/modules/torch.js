@@ -6,6 +6,7 @@ export class Torch {
     // this.launchCamera();
     const body = document.body;
     const html = document.documentElement;
+    this.light = document.getElementById('flashlight');
 
     this.pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     this.pageWidth = Math.max(body.scrollLeft, body.offsetWidth, html.clientWidth, html.scrollLeft, html.offsetWidth);
@@ -38,6 +39,7 @@ export class Torch {
       // UPDATE CURSOR POS
       point.style.top = `${pos.y}px`;
       point.style.left = `${pos.x}px`;
+      this.light.style.backgroundPosition = `${e.clientX-400}px ${e.clientY-400}px`;
     });
 
     // RETURN DOM NODE
@@ -45,6 +47,7 @@ export class Torch {
   }
 
   launchCamera() {
+    const ø = window.ø;
     const video = document.createElement('video');
     video.width = 600;
     video.height = 450;
@@ -67,7 +70,6 @@ export class Torch {
 
 
     this.targets = Object.keys(window.targets).map((key, index) => {
-
       const elem = window.targets[index];
       const coords = elem.getBoundingClientRect();
       elem.coords = {
@@ -78,6 +80,7 @@ export class Torch {
 
       return elem;
     });
+
     this.page = ø.el('.page.active').classList[2].replace('page-', '');
     const tracking = window.tracking;
     this.canvas = canvas;
@@ -86,7 +89,7 @@ export class Torch {
     this.trackerTask = tracking.track('#video', this.tracker, {
       camera: true,
     });
-    this.enable = true;
+    //this.trackerTask.stop(); // Stops the tracking
 
     this.tracker.on('track', (event) => {
       if (event.data.length === 0) return; // No targets were detected in this frame.
@@ -139,10 +142,11 @@ export class Torch {
         }
       }
 
-
       // UPDATE CURSOR POS
       this.cursor.style.top = `${newPosTop}%`;
       this.cursor.style.left = `${newPosLeft}%`;
+      console.log(rect.x, rect.y);
+      this.light.style.backgroundPosition = `${-rect.x * 1.75}px ${rect.y}px`;
 
       // // RENDER TRACK
       // point.style.transform = `translate3d(${newPosLeft}vw ,${newPosTop}vh, 0`;
