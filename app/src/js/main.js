@@ -88,7 +88,7 @@ $('.previous').on('click', () => {
 const torch = new Torch();
 const moon = new MoonTimeline('-90%');
 const events = new PageEvents(pages.filter((e) => e.tag === pages[0].tag)[0]);
-torch.launchCamera();
+//torch.launchCamera();
 
 
 /*if (i = 6 ){
