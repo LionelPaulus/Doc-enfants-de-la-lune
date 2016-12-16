@@ -10,7 +10,7 @@ export class MoonTimeline {
     MoonDomNode.id = 'moon';
     MoonDomNode.className = 'moon';
 
-    ø.el('section.page').appendChild(MoonDomNode);
+    ø.el('.moon-container').appendChild(MoonDomNode);
     this.$.container = $(MoonDomNode);
 
     this.$.container[0].style.bottom = bottom;
