@@ -17,7 +17,7 @@ $page-gradient: radial-gradient(80vh at center, #071629, #020C18);
 
 $moon-size: 50vw;
 $moon-globe-ratio: 90%;
-$moon-color: #fff;
+$moon-color: $mauve;
 
 
 //// =======================================================================//
@@ -26,6 +26,7 @@ $moon-color: #fff;
 
 $background-text: #27303a;
 $body-text-color: #000;
+$body-dark-text-color: #1d2a37;
 
 //// =======================================================================//
 //   TORCH CURSOR                                                          //

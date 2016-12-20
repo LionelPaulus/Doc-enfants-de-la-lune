@@ -4,6 +4,7 @@
     @include MoonGlobe;
     @include MoonTimeline;
     @include MoonCursor;
+    @include MoonSteps;
   }
 }
 
@@ -18,6 +19,7 @@
   right: 0;
   transform: translateY(-5%);
   width: $moon-size !important;
+  z-index: 2;
 }
 
 
@@ -39,8 +41,8 @@
       height: $moon-globe-ratio;
       margin: 5% auto;
       width: $moon-globe-ratio;
-      background:white;
-      background-size: 100%;
+      background: url('../media/img/pink-moon.png') center center no-repeat;
+      background-size: cover;
     }
   }
 }
@@ -51,6 +53,7 @@
   }
   .rs-border {
     border-color: $moon-color;
+    border-width: 2px;
   }
   .rs-inner {
     &.rs-border {
@@ -61,14 +64,62 @@
 
 @mixin MoonCursor {
   .rs-handle {
-    background-color:$moon-color;
+    background-color: $white;
+    border-radius: 50%;
     box-shadow:
     0 0 0 5px rgba(255, 255, 255, 1),
     0 0 0 10px  rgba(255, 255, 255, .45),
     0 0 0 15px rgba(255, 255, 255, .65);
-    margin-left: -5px!important;
-
+    margin-left: -4px!important;
   }
 }
+
+@mixin MoonSteps {
+  li {
+    background: red;
+    border-radius: 50%;
+    height: 20px;
+    list-style: none;
+    width: 20px;
+
+    &:nth-of-type(1) {
+      background: brown;
+      left: 20.5%;
+      position: absolute;
+      top: 8%;
+    }
+    &:nth-of-type(2) {
+      background: blue;
+      left: 33.5%;
+      position: absolute;
+      top: 15px;
+    }
+    &:nth-of-type(3) {
+      background: green;
+      left: 43.5%;
+      position: absolute;
+      top: -6px;
+    }
+    &:nth-of-type(4) {
+      background: yellow;
+      position: absolute;
+      right: 43.5%;
+      top: -6px;
+    }
+    &:nth-of-type(5) {
+      background: yellow;
+      position: absolute;
+      right: 33.5%;
+      top: 15px;
+    }
+    &:nth-of-type(6) {
+      background: brown;
+      right: 20.5%;
+      position: absolute;
+      top: 8%;
+    }
+  }
+}
+
 
 @include Moon;

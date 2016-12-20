@@ -1,0 +1,49 @@
+.alarm-clock {
+  border: 3px solid $mauve;
+  border-radius: 8px;
+  height: 80px;
+  position: absolute;
+  display:none;
+  right: 5vh;
+  top: 5vh;
+  width: 72px;
+  z-index: 3;
+  .icon {
+    background-image: url('../media/img/clock_icon.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 1.5px solid $mauve;
+    height: 50px;
+    width: 100%;
+  }
+
+  .time {
+    align-items: center;
+    display: flex;
+    height: calc(80px - 50px);
+    justify-content: center;
+
+    span {
+      color: $white;
+      font-family: $content-font-family;
+      font-size: 13px;
+    }
+  }
+}
+
+.flashlight {
+  background-repeat: no-repeat;
+  background: radial-gradient(300px 300px, circle contain, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)) center center ;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: opacity 3s linear, transform 1s ease-in;
+  &.on {
+    opacity: 0;
+    transform: scale(10);
+  }
+}

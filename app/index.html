@@ -3,37 +3,74 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Enfants de la lune - EXPERIENCE</title>
-  <style media="screen">
-    ul{
-      width: 80%;
-      margin: auto;
-    }
-    li{
-      margin : 1em;
-    }
-    a{
-      font-family: sans-serif;
-      font-size: 2em;
-    }
-  </style>
+  <title>Enfants de la Lune</title>
+  <link rel="stylesheet" href="dist/css/home.css">
+  <link rel="icon" type="image/png" href="dist/media/img/logo_final.png" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 </head>
+  <body>
+    <section class="page home">
+      <div id="page-home">
+        <div class="background-text"></div>
+        <div class="home__grid">
+          <div class="home__content">
+            <div class="home__title">
+              <h1 class="home__txt">mettons la lumière sur une maladie rarissime</h1>
+            </div>
+            <div class="home__mask">
+              <div class="home_video">
+                <video autoplay loop class="home__mask__img" src="dist/media/video/home_video.mp4"/>
+              </div>
+            </div>
+            <div class="home__btn">
+              <button class="home__btnTxt js-scrollTo" href="#quickstart">démarrer l'expérience</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quickstart" id="quickstart">
+      <div id="page-quickstart">
+        <div class="instructions">
+          <h1 class="instructions__title">intéragissez d'une façon unique</h1>
+          <div class="instructions__status detected" style="opacity:0">
+            smartphone détecté
+          </div>
+          <div class="flex">
+            <div class="instructions__steps firststep">
+              <img src="dist/media/img/iphone-face.svg" alt="iPhone de face">
+              <h2>1. accédez à l'url</h2>
+              <p>Saisissez l'URL ci-dessous dans le<br>navigateur de votre mobile.</p>
+              <p class="url">http://edll.tk</p>
+            </div>
+            <div class="instructions__steps secondstep">
+              <img src="dist/media/img/iphone-back.svg" alt="iPhone de dos">
+              <h2>2. tenez votre téléphone<br>face à votre écran</h2>
+              <p>Une fois votre téléphone connecté,<br>tenez-le d'une main, l'écran face à l'écran d'ordinateur.</p>
+            </div>
+          </div>
+          <div class="home__btn">
+            <button class="home__btnTxt" id="start">continuer</button>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="popup">
+          <h1 class="popup__title">VOTRE SMARTPHONE N'EST PAS détecté</h1>
+          <h2 class="popup__subtitle">vous allez continuez l’experience<br>avec votre souris</h2>
+          <p class="popup__content">Votre souris prendra le rôle de votre<br>smartphone. Nous vous conseillons<br>vivement de continuez l’experience avec<br>votre smartphone</p>
+          <a class="popup__link">
+            continuer l'expérience avec la souris
+            <br><img src="dist/media/img/mouse.svg" alt="Souris">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="logo-mobile">
+      <video src="dist/media/video/logo_mobile.mp4" id="video-mobile" poster="dist/media/img/video-poster.png" autoplay loop>
+      </video>
+    </section>
 
-<body>
-  <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="moon-test.html">Moon test</a></li>
-    <li><a href="rythm.html">Rythm</a></li>
-    <li><a href="webcam.html">Webcam</a></li>
-    <li><a href="leo.html">Leo</a></li>
-    <li><a href="dermatologue.html">Dermatologue</a></li>
-    <li><a href="suit.html">Suit</a></li>
-    <li><a href="remerciements.html">Remerciements</a></li>
-    <li><a href="journee.html">Journee</a></li>
-    <li><a href="maladie.html">Maladie</a></li>
-    <li><a href="consequences.html">Conséquences</a></li>
-    <li><a href="howToTreat.html">Comment le soigner</a></li>
-  </ul>
-</body>
-
+    <script src="dist/vendor/libs/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/home.js"></script>
+  </body>
 </html>

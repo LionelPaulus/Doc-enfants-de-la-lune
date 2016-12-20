@@ -1,11 +1,15 @@
 .page-consequences {
   .flex {
     display: flex;
+    transform: translateY(-2vw);
 
     &.center {
       align-items: center;
-      height: 100vh;
       justify-content: center;
+    }
+
+    &.fullheight {
+      height: 100vh;
     }
 
     &.large {
@@ -14,6 +18,13 @@
 
     .consequences {
       text-align: center;
+
+      .anim-intro {
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-name: consequenceIntro;
+        opacity: 0;
+      }
 
       .consequences__line {
         background-color: $mauve;
@@ -24,41 +35,66 @@
         width: 70px;
       }
 
-      .consequences__title {
-        position: relative;
+      .consequences__data {
+        color: $body-dark-text-color;
         font-family: $status-font-family;
-        font-size: 23px;
+        font-size: 100px;
+        user-select: none;
+      }
+
+      .consequences__title {
+        font-family: $status-font-family;
+        font-size: 18px;
+        line-height: 1.3em;
+        margin-top: -40px;
+        position: relative;
+        text-transform: uppercase;
       }
 
       .consequences__content {
         font-family: $content-font-family;
-        font-size: 17px;
+        font-size: 13px;
+        font-weight: 100;
+        line-height: 1.2em;
+        text-transform: uppercase;
       }
 
       .consequences__center {
         width: 100%;
       }
 
-      .consequences__left {
-        margin-top: 20vh;
+      .consequences__left__top {
+        animation-delay: 400ms;
         width: 40%;
       }
 
-      .consequences__right {
-        margin-top: 20vh;
+      .consequences__right__top {
+        animation-delay: 800ms;
         width: 40%;
+        margin-top: 5vh;
+      }
+
+      .consequences__left__bottom {
+        animation-delay: 200ms;
+        margin-right: 5vw;
+      }
+
+      .consequences__right__bottom {
+        animation-delay: 600ms;
+        margin-left: 5vw;
+        margin-top: 5vh;
       }
 
       .consequences__graphic {
-        margin-top: 5vh;
+        margin-top: 12vh;
         width: 20%;
 
         .consequences__circle {
           border: 1px solid $mauve;
           border-radius: 50%;
-          height: 130px;
+          height: 110px;
           margin: auto;
-          width: 130px;
+          width: 110px;
 
           span {
             background-image: radial-gradient(50% 50%, $white 50%, $white 66%, $true-black 100%);
@@ -74,16 +110,27 @@
           }
 
           span:nth-of-type(2) {
-            margin-left: -63px;
-            margin-top: 90px;
+            margin-left: -52px;
+            margin-top: 80px;
           }
 
           span:nth-of-type(3) {
-            margin-left: 53px;
-            margin-top: 90px;
+            margin-left: 42px;
+            margin-top: 80px;
           }
         }
       }
     }
+  }
+}
+
+@keyframes consequenceIntro {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

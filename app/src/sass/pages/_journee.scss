@@ -1,75 +1,90 @@
+.page-journee {
 
-.day {
-  display: flex;
-  height: auto;
-  margin-top: 45px;
-  max-width: 943px;
-  position: relative;
-  width: 100%;
-  > div {
-    height: auto;
-    width: 50%;
-    video {
-      max-width: 100%;
-    }
+  .background-text {
+    background: url('../media/img/label_jour.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 
+  .day {
+    display: flex;
+    height: auto;
+    margin: auto;
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    > div {
+      width: 40%;
+      video {
+        max-width: 100%;
+      }
+    }
+    &:nth-child(odd) {
+      > div:nth-child(1) {
+        padding-right: 35px;
+      }
 
-  &:nth-child(even) {
-    > div:nth-child(1) {
-      padding-right: 55px;
+      > div:nth-child(2) {
+        padding-left: 35px;
+      }
     }
 
-    > div:nth-child(2) {
-      padding-left: 55px;
+    &:nth-child(odd) {
+      > div:nth-child(1) {
+        padding-left: 35px;
+      }
+
+      > div:nth-child(2) {
+        padding-right: 35px;
+      }
     }
-  };
+  }
+  p {
+    color: $white;
+    font-family: $content-font-family;
+    font-size: 14px;
+    font-weight: $fix-futura-book-weight;
+    letter-spacing: 1px;
+    line-height: 15px;
+    padding-top: 10px;
+    text-align: justify;
+  }
 
-  &:nth-child(odd) {
-    > div:nth-child(1) {
-      padding-left: 55px;
-    }
+  .absolute-overlay {
+    position: absolute;
+    width: 40%;
+    background: $mauve;
+    opacity: .4;
+  }
 
-    > div:nth-child(2) {
-      padding-right: 55px;
-    }
-  };
-}
+  .text__day__title {
+    color: $white;
+    font-family: $status-font-family;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
 
+  .divider-day {
+    background: $mauve;
+    height: 1px;
+    margin-left: 1.5em;
+    width: 50px;
+    margin-top: 1vh;
+  }
 
-p {
-  color: $white;
-  font-family: $content-font-family;
-  font-size: 15px;
-  font-weight: $fix-futura-book-weight;
-  letter-spacing: 1px;
-  line-height: 18px;
-  padding-top: 20px;
-}
+  .light {
+    opacity: 1;
+  }
 
+  .dark {
+    opacity: .4;
+  }
 
-.text__day__title {
-  color: $white;
-  font-family: $content-font-family;
-  font-size: 21px;
-  letter-spacing: 2px;
-  margin-top: 10px;
-  text-transform: uppercase;
-}
-
-
-
-.divider-day {
-  background: $mauve;
-  height: 3px;
-  margin-left: 1em;
-  width: 50px;
-}
-
-.light {
-  opacity: 1;
-}
-
-.dark {
-  opacity: .4;
+  .day:last-child {
+    margin-top: 30px;
+  }
+  .active-border {
+    border-right: 5px solid $mauve;
+  }
 }

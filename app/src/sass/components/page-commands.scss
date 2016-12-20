@@ -4,11 +4,16 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 3;
+
     }
     & > .previous {
+      display: none;
+      user-select: none;
       @include page-commands-previous;
     }
     & > .next {
+      user-select: none;
       @include page-commands-next;
     }
     .bar {

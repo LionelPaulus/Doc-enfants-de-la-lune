@@ -1,0 +1,61 @@
+$loader-ring-size: 100px;
+$loader-ring-border-size: 4px;
+
+.relative {
+  position: relative;
+}
+
+.loader {
+  background: $page-gradient;
+  background-size: 100% 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transition: visibility 1s, opacity 1s linear;
+  width: 100%;
+  z-index: 4;
+
+  &.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader-ring {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: $loader-ring-size/-2 0 0 $loader-ring-size/-2;
+  width: $loader-ring-size;
+  height: $loader-ring-size;
+}
+
+.loader-ring-light {
+  width: $loader-ring-size;
+  height: $loader-ring-size;
+  border-radius: $loader-ring-size;
+  box-shadow: (0 $loader-ring-border-size 0 lighten(#b61282, 10%) inset);
+  animation: rotate-360 2s linear infinite;
+}
+
+
+.loader-ring-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $loader-ring-size;
+  height: $loader-ring-size;
+  border-radius: $loader-ring-size;
+  box-shadow: (0 0 10px $loader-ring-border-size rgba(black, .3) inset);
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
