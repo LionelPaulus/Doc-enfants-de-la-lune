@@ -172,7 +172,7 @@ export class Torch {
         // UPDATE CURSOR POS
         this.cursor.style.transform = `translate3d(${newPosLeft}vw, ${newPosTop}vh, 0)`;
         this.light.style.backgroundPosition = `
-        ${(this.pageWidth * newPosLeft / 100) - 300 }px;
+        ${(this.pageWidth * newPosLeft / 100) - 300 }px
         ${(this.pageHeight * newPosTop / 100) - 300}px`;
 
         // // RENDER TRACK
