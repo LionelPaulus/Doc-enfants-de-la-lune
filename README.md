@@ -1,6 +1,5 @@
 # Doc-enfants-de-la-lune
-Semaines intensives HETIC
-
+School project done in 2 weeks with a group of 6 for a pedagogical project whose theme was “the light”. We chose to shed light on a rare disease, Xeroderma pigmentosum.
 
 
 ### Installation
